@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robot_arm1">
+
+<gazebo>
+    <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+        <!-- <robot_param>$(find my_arm_robot_description)/urdf/arm_robot_gazebo.urdf.xacro</robot_param> -->
+        <robot_param>robot_description</robot_param>
+        <robot_param>robot_state_publisher</robot_param>
+        <parameters></parameters>
+    </plugin>
+</gazebo>
+
+</robot>
