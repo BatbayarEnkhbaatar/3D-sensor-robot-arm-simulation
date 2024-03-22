@@ -30,27 +30,27 @@ def generate_launch_description():
         executable="spawner",
         arguments=[
             "joint_state_broadcaster",
-            "--controller-manager",  # Corrected typo here: "contoller-manager" to "controller-manager"
+            "--controller-manager",  
             "/controller_manager",
         ]
     )
 
     arm_controller_spawner = Node(
-        package="controller_manager",  # Corrected typo here: "contoller_manager" to "controller_manager"
+        package="controller_manager",  
         executable="spawner",
         arguments=[
             "arm_controller",
-            "--controller-manager",  # Corrected typo here: "contoller-manager" to "controller-manager"
+            "--controller-manager", 
             "/controller_manager"
         ]
     )
 
     gripper_controller_spawner = Node(
-        package="controller_manager",  # Corrected typo here: "contoller_manager" to "controller_manager"
+        package="controller_manager",  
         executable="spawner",
         arguments=[
             "gripper_controller",
-            "--controller-manager",  # Corrected typo here: "contoller-manager" to "controller-manager"
+            "--controller-manager", 
             "/controller_manager"
         ]
     )
