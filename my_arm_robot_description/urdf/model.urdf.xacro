@@ -198,7 +198,7 @@
 
         <origin xyz="-0.08 0.13 -0.1"/>
             <mimic joint="joint_4" multiplier="-1"/>
-        <limit lower="0.0" upper="${PI/2}" effort="${effort}" velocity="${velocity/2}"/>
+        <limit lower="0.0" upper="${PI / 2}" effort="${effort}" velocity="${velocity}"/>
     </joint>
 <xacro:default_transimssion number = "1"/>
 <xacro:default_transimssion number = "2"/>

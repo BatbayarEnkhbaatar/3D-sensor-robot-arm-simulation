@@ -6,7 +6,7 @@
         <!-- <robot_param>$(find my_arm_robot_description)/urdf/arm_robot_gazebo.urdf.xacro</robot_param> -->
         <robot_param>robot_description</robot_param>
         <robot_param>robot_state_publisher</robot_param>
-        <parameters></parameters>
+        <parameters>$(find my_arm_robot_controller)/config/arm_robot_conrollers.yaml</parameters>
     </plugin>
 </gazebo>
 
