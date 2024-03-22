@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 10  # Typo: Should be "update_rate" instead of "uptdate_rate"
+    update_rate: 10  
     
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
@@ -9,7 +9,7 @@ controller_manager:
     #   type: joint_trajectory_controller/JointTrajectoryController
 
     gripper_controller:
-        type: forward_command_controller/ForwardCommandController  # Typo: Should be "ForwardCommandController" instead of "ForwardCommanController"
+        type: forward_command_controller/ForwardCommandController  
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
