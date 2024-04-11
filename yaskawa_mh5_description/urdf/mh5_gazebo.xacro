@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="yaskawa_mh5">
+
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <robot_param>robot_description</robot_param>
+            <robot_param>robot_state_publisher</robot_param>
+            <!-- <parameters></parameters>  -->
+            <parameters>$(find yaskawa_mh5_controller)/config/mh5_ros2_controller.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+</robot>

@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="yaskawa_mh5lf">
+
+    <xacro:include filename="$(find yaskawa_mh5_description)/urdf/mh5_gazebo.xacro"/>
+    <xacro:include filename="$(find yaskawa_mh5_description)/urdf/mh5_ros2_controller.xacro"/>
+
+			<!-- transmission for robot controller -->
+		<xacro:macro name="default_transimssion" params="number">
+				<transmission name="transmission_${number}"> 
+					<plugin>transmission_interface/SimpleTransmission</plugin>
+					<actuator name="motor_${number}" role = "actuater1">
+						<joint name="joint_${number}" role="joint1">
+							<mechanical_reduction>1.0</mechanical_reduction>
+					</joint>
+					</actuator>
+				</transmission>
+		</xacro:macro>
+
+		<!-- end transmission for robot controller -->
+	<xacro:macro name="yaskawa_mh5_description" params="prefix">
+		<xacro:include filename="$(find motoman_resources)//urdf/common_materials.xacro"/>
+
+		<!-- macro function for inertial-->
+		<xacro:macro name="default_inertial" params="mass">
+			<inertial>
+				<mass value="${mass}"/>
+				<inertia ixx="1.0" ixy="0.0" ixz="0.0"
+						iyy="1.0" iyz="0.0"
+						izz="1.0" />
+			</inertial>
+		</xacro:macro>
+		<!-- end of macro function for inertial -->
+
+
+		<link name= "world"/>
+
+		<!-- base link -->
+		<link name="${prefix}base_link">
+			<xacro:default_inertial mass="1.0"/>
+			<visual>
+			        <origin rpy="0 0 3.14159"/>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_BASE_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_blue/>
+			</visual>
+		
+			<collision>
+			        <origin rpy="0 0 3.14159"/>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_BASE_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_yellow/>
+			</collision>
+		</link>
+		<!-- link s -->
+		<link name="${prefix}link_s">
+		<xacro:default_inertial mass="1.0"/>
+			<visual>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_S_AXIS.stl"/>
+				</geometry>
+				<xacro:material_yaskawa_white/>
+			</visual>
+			<collision>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_S_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_yellow/>
+			</collision>
+		</link>
+
+		<!-- link l--><xacro:default_inertial mass="1.0"/>
+
+		<link name="${prefix}link_l">
+		<xacro:default_inertial mass="1.0"/>
+			<visual>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_L_AXIS.stl"/>
+				</geometry>
+				<xacro:material_yaskawa_blue/>
+			</visual>
+			<collision>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_L_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_yellow/>
+			</collision>
+		</link>
+		<!-- link u  -->
+		<link name="${prefix}link_u">
+		<xacro:default_inertial mass="1.0"/>
+			<visual>
+
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_U_AXIS.stl"/>
+				</geometry>
+				<xacro:material_yaskawa_blue/>
+			</visual>
+			<collision>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_U_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_yellow/>
+			</collision>
+		</link>
+
+		<!-- link f  -->
+		<link name="${prefix}link_r">
+		<xacro:default_inertial mass="1.0"/>
+			<visual>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_R_AXIS.stl"/>
+				</geometry>
+				<xacro:material_yaskawa_white/>
+			</visual>
+			<collision>
+
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_R_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_yellow/>
+			</collision>
+		</link>
+
+		<!-- link b  -->
+		<link name="${prefix}link_b">
+		<xacro:default_inertial mass="1.0"/>
+			<visual>
+
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_B_AXIS.stl"/>
+				</geometry>
+				<xacro:material_yaskawa_blue/>
+			</visual>
+			<collision>
+
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_B_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_yellow/>
+			</collision>
+		</link>
+
+		<!-- link t  -->
+		<link name="${prefix}link_t">
+		<xacro:default_inertial mass="1.0"/>
+			<visual>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_T_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_white/>
+			</visual>
+			<collision>
+				<geometry>
+					<mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_T_AXIS.stl" />
+				</geometry>
+				<xacro:material_yaskawa_yellow/>
+			</collision>
+		</link>
+		<!-- link are ended here -->
+		
+		<joint name="virtual_joint" type = "fixed">
+			<parent link="world"/>
+			<child link="${prefix}base_link"/>
+			<origin xyz = "0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+		</joint>			
+
+		<!-- joints are from here -->
+		<joint name="${prefix}joint_s" type="revolute">
+			<parent link="${prefix}base_link"/>
+			<child link="${prefix}link_s"/>
+			<origin xyz="0 0 0.1990" rpy="0 0 0"/>
+			<axis xyz="0 0 1" />
+			<limit lower="-2.9671" upper="2.9671" effort="100" velocity="2.96" />
+		</joint>
+		<joint name="${prefix}joint_l" type="revolute">
+			<parent link="${prefix}link_s"/>
+			<child link="${prefix}link_l"/>
+			<origin xyz="0.0880 0 0.1310" rpy="0 0 0"/>
+			<axis xyz="0 1 0" />
+			<limit lower="-1.1345" upper="2.6180" effort="100" velocity="2.96" />
+		</joint>
+		<joint name="${prefix}joint_u" type="revolute">
+			<parent link="${prefix}link_l"/>
+			<child link="${prefix}link_u"/>
+			<origin xyz="0 0 0.3100" rpy="0 0 0"/>
+			<axis xyz="0 -1 0" />
+
+			<limit lower="-1.0122" upper="3.2218" effort="100" velocity="2.96" />
+		</joint>
+		<joint name="${prefix}joint_r" type="revolute">
+			<parent link="${prefix}link_u"/>
+			<child link="${prefix}link_r"/>
+			<origin xyz="0.0715 0 0.0399" rpy="0 0 0"/>
+			<axis xyz="-1 0 0" />
+			<limit lower="-3.3161" upper="3.3161" effort="100" velocity="3.48" />
+		</joint>
+		<joint name="${prefix}joint_b" type="revolute">
+			<parent link="${prefix}link_r"/>
+			<child link="${prefix}link_b"/>
+			<origin xyz="0.2335 0 0" rpy="0 0 0"/>
+			<axis xyz="0 -1 0" />
+			<limit lower="-2.1817" upper="2.1817" effort="100" velocity="3.48" />
+		</joint>
+		<joint name="${prefix}joint_t" type="revolute">
+			<parent link="${prefix}link_b"/>
+			<child link="${prefix}link_t"/>
+			<origin xyz="0.0865 0 0" rpy="0 0 0"/>
+			<axis xyz="-1 0 0" />
+			<limit lower="-6.2831" upper="6.2831" effort="100" velocity="6.97" />
+		</joint>
+
+	</xacro:macro>
+
+	<xacro:default_transimssion number = "s"/>
+	<xacro:default_transimssion number = "l"/>
+	<xacro:default_transimssion number = "u"/>
+	<xacro:default_transimssion number = "r"/>
+	<xacro:default_transimssion number = "b"/>
+	<xacro:default_transimssion number = "t"/>	
+
+
+</robot>
+

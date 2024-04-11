@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="yaskawa_mh5lf">
+     
+     <xacro:property name="PI" value="3.14159"/>
+
+    <ros2_control name = "RobotSystem" type = "system">
+    <hardware>
+        <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <joint name ="joint_s">
+    <command_interface name = "position">
+        <param name="min">-${PI/2}</param>
+        <param name = "max">${PI/2}</param>
+    </command_interface>
+    <state_interface name ="position" />
+    
+    </joint>
+        <joint name ="joint_l">
+    <command_interface name = "position">
+        <param name="min">-${PI/2}</param>
+        <param name = "max">${PI/2}</param>
+    </command_interface>
+    <state_interface name ="position" />
+    </joint>
+
+    <joint name ="joint_u">
+        <command_interface name = "position">
+            <param name="min">-${PI/2}</param>
+            <param name = "max">${PI/2}</param>
+        </command_interface>
+        <state_interface name ="position" />
+    </joint>
+
+    <joint name ="joint_r">
+        <command_interface name = "position">
+            <param name="min">-${PI/2}</param>
+            <param name = "max">0.0</param>
+        </command_interface>
+        <state_interface name ="position" />
+    </joint>
+
+    <joint name ="joint_b">
+
+            <command_interface name = "position">
+                <param name="min">0.0</param>
+                <param name = "max">${PI/2}</param>
+            </command_interface>
+        <state_interface name ="position" />
+    </joint>
+        <joint name ="joint_t">
+
+            <command_interface name = "position">
+                <param name="min">0.0</param>
+                <param name = "max">${PI/2}</param>
+            </command_interface>
+        <state_interface name ="position" />
+    </joint>
+    </ros2_control>
+</robot>
