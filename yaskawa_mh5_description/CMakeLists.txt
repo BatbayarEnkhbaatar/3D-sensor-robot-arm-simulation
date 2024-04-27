@@ -11,7 +11,7 @@ find_package(ament_cmake REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 install (DIRECTORY
-    meshes urdf launch rviz models motoman_resources/urdf
+    meshes urdf launch rviz motoman_resources 
     DESTINATION share/${PROJECT_NAME}/)
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

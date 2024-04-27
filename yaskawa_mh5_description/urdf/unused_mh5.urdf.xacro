@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <robot name="yaskawa_mh5lf" xmlns:xacro="http://ros.org/wiki/xacro">
-	<xacro:include filename="$(find yaskawa_mh5_description)/urdf/mh5_macro.xacro" />
+	<xacro:include filename="$(find yaskawa_mh5_description)/urdf/mh5_macro.urdf.xacro" />
 	<xacro:yaskawa_mh5_description prefix=""/>
 </robot>
 

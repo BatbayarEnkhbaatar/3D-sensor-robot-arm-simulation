@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find motoman_resources)/urdf/common_colors.xacro"/>
+  <xacro:include filename="$(find yaskawa_mh5_description)/motoman_resources/models/common_colors.xacro"/>
 
   <xacro:macro name="material_yaskawa_blue">
     <material name="">
