@@ -1,3 +1,20 @@
 {
-    "cmake.sourceDirectory": "/home/baggi/ws_ros2/src/ardiono_robot_cpp"
+    "cmake.sourceDirectory": "/home/baggi/ws_ros2/src/micro_ros_setup",
+    "C_Cpp.errorSquiggles": "disabled",
+    "python.autoComplete.extraPaths": [
+        "/home/baggi/ws_ros2/install/yaskawa_msgs/local/lib/python3.10/dist-packages",
+        "/home/baggi/ws_ros2/install/yaskawa_mh5_examples/lib/python3.10/site-packages",
+        "/home/baggi/ws_ros2/install/yaskawa_remote/lib/python3.10/site-packages",
+        "/home/baggi/ws_ros2/install/motoros2_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/baggi/ws_ros2/install/yaskawa_msgs/local/lib/python3.10/dist-packages",
+        "/home/baggi/ws_ros2/install/yaskawa_mh5_examples/lib/python3.10/site-packages",
+        "/home/baggi/ws_ros2/install/yaskawa_remote/lib/python3.10/site-packages",
+        "/home/baggi/ws_ros2/install/motoros2_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
 }
