@@ -33,6 +33,7 @@
   </xacro:macro>
 <!-- end transmission for robot controller -->
   <!-- link list -->
+
   <link name = "world" />
 
   <link name="base_link">
@@ -56,6 +57,56 @@
       </material>
     </collision>
   </link>
+
+
+<!-- Camera Pole Link -->
+<!-- <link name="camera_pole">
+  <xacro:default_inertial mass="0.5"/>
+  <visual>
+    <origin xyz="1 0 0"/>
+    <geometry>
+      <cylinder length="1.0" radius="0.05"/>
+    </geometry>
+    <material name="grey">
+      <color rgba="0.5 0.5 0.5 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <origin xyz="1 0 0"/>
+    <geometry>
+      <cylinder length="1.0" radius="0.05"/>
+    </geometry>
+  </collision>
+</link> -->
+
+<!-- Depth Camera Link -->
+<!-- 
+<link name="depth_camera">
+  <xacro:default_inertial mass="0.5"/>
+  <visual>
+    <geometry>
+      <box size="0.2 0.4 0.1"/>
+    </geometry>
+    <material name="black">
+      <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.2 0.4 0.1"/>
+    </geometry>
+  </collision>
+</link> -->
+
+
+<!-- Joint between camera pole and depth camera -->
+<!-- <joint name="pole_to_camera" type="fixed">
+  <parent link="camera_pole"/>
+  <child link="depth_camera"/>
+  <origin xyz="0 0 0.95" rpy="0 0 0"/>
+  <axis xyz="0 1.5 0"/> 
+</joint>  -->
+
   <link name="link_s">
     <xacro:default_inertial mass="1.0"/>
     <visual>
@@ -100,7 +151,7 @@
       <material name="blue"/>
     </visual>
     <collision>
-      <!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
+
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_U_AXIS.stl"/>
       </geometry>
@@ -110,31 +161,48 @@
   <link name="link_r">
     <xacro:default_inertial mass="1.0"/>
     <visual>
-      <!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_R_AXIS.stl"/>
       </geometry>
       <material name="silver"/>
     </visual>
     <collision>
-      <!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_R_AXIS.stl"/>
       </geometry>
       <material name="yellow"/>
     </collision>
   </link>
+
+<!-- 3D sensor  -->
+  <link name="3d_camera">
+    <xacro:default_inertial mass="0.5"/>
+    <visual>
+      <geometry>
+          <mesh filename = "package://yaskawa_mh5_description/meshes/mh5/collision/BIN_PICKING_MODULE_1CH_ASM.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename = "package://yaskawa_mh5_description/meshes/mh5/collision/BIN_PICKING_MODULE_1CH_ASM.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver"/>
+    </collision>
+  </link>
+
+
   <link name="link_b">
     <xacro:default_inertial mass="1.0"/>
     <visual>
-      <!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
+
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_B_AXIS.stl"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
-      <!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
+
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_B_AXIS.stl"/>
       </geometry>
@@ -156,8 +224,6 @@
       <material name="yellow"/>
     </collision>
   </link>
-  <!-- end of link list -->
-  <!-- joint list -->
 
   <joint name="virtual_joint" type="fixed">
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
@@ -165,7 +231,14 @@
     <child link="base_link"/>
     <axis xyz="0.0 0.0 0.0"/>
     <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
+  </joint> 
+  <!-- Joint between link_r and camera  -->
+  <joint name="joint_3d_camera" type="fixed">
+    <parent link="link_r"/>
+    <child link="3d_camera"/>
+    <origin xyz="0.0715 0 0.08" rpy="1.5708 0 1.5708"/>
   </joint>
+
   <joint name="joint_s" type="revolute">
 
     <parent link="base_link"/>
@@ -196,6 +269,8 @@
     <axis xyz="-1 0 0"/>
     <limit effort="100" lower="-3.3161" upper="3.3161" velocity="3.48"/>
   </joint>
+
+
   <joint name="joint_b" type="revolute">
     <parent link="link_r"/>
     <child link="link_b"/>
@@ -210,6 +285,8 @@
     <axis xyz="-1 0 0"/>
     <limit effort="100" lower="-6.2831" upper="6.2831" velocity="6.97"/>
   </joint>
+
+
   <!-- Define transmissions -->
     <xacro:default_transmission number="s"/>
     <xacro:default_transmission number="l"/>
@@ -217,4 +294,5 @@
     <xacro:default_transmission number="r"/>
     <xacro:default_transmission number="b"/>
     <xacro:default_transmission number="t"/>    
+
 </robot>

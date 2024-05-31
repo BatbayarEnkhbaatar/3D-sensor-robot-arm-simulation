@@ -17,6 +17,7 @@ arm_controller:
       - joint_r
       - joint_b
       - joint_t
+      - joint_3d_camera
     command_interfaces:
       - position
     state_interfaces:

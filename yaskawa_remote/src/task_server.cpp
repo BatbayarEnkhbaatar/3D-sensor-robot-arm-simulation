@@ -63,9 +63,14 @@ private:
         {
             arm_joint_goal =  {-0.14, 0.5, 0.0, 0.0, 0.0, 0.0};
         }
+
+        else if (goal_handle->get_goal()->task_number == 2)
+        {
+            arm_joint_goal = {0.15, 1.5, 0.0, 0.0, 0.0, 0.0};
+        }
         else
         {
-            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Invalid task number");
+            RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Invalid task number!!!!");
             return;
         }
 

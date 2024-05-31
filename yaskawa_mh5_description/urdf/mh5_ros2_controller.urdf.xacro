@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="yaskawa_mh5lf">
-
     <xacro:property name="PI" value="3.14159"/>
-
     <ros2_control name="RobotSystem" type="system">
         <hardware>
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
@@ -55,5 +53,6 @@
             </command_interface>
             <state_interface name="position"/>
         </joint>
+        
     </ros2_control>
 </robot>
