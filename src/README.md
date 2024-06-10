@@ -9,7 +9,7 @@
 - ROS2 Gazebo Controller Library
 - Gazebo-Ros
 
-## Commands
+## Commands to install ROS2 and dependencies
 
 ```bash
 
@@ -23,7 +23,13 @@ sudo apt-get install ros-humble-ros2-controllers
 sudo apt-get install ros-humble-gazebo-ros2-control
 sudo apt-get install ros-humble-moveit
 sudo apt-get install ros-humble-ros-control ros-humble-ros-controllers
+``` 
 
+## Commands to install FLASK 
+
+```bash
 
 sudo apt install python3
 pip3 install Flask
+
+'''
