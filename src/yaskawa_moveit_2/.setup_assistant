@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: yaskawa_mh5_description
+    relative_path: urdf/mh5.urdf.xacro
+  srdf:
+    relative_path: config/yaskawa_mh5lf.srdf
+  package_settings:
+    author_name: baggi@haanvision.com
+    author_email: baggi@haanvision.com
+    generated_timestamp: 1716284250
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
