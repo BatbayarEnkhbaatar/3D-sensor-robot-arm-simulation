@@ -15,7 +15,7 @@
 class BinpickingClient : public rclcpp::Node {
 public:
     BinpickingClient() : Node("binpicking_client"), tcp_sock(-1) {
-        spdlog::info("Attempting to connect to 3D Sensor[{}:{}]", HOST_IP, PORT_NUM);
+        spdlog::info("Connection to the 3DSensor[{}:{}] is being established ...", HOST_IP, PORT_NUM);
 
         tcp_sock = socket(AF_INET, SOCK_STREAM, 0);
         if (tcp_sock < 0) {
