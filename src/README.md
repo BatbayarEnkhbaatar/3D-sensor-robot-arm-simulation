@@ -2,7 +2,7 @@
 
 
 
-# Prerequests
+# Pre-Requisites
 
 # Moveit2
 # Ros2
