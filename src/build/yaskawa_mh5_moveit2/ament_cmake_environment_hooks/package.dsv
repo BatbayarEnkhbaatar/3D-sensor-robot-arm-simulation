@@ -1,0 +1,4 @@
+source;share/yaskawa_mh5_moveit2/local_setup.bash
+source;share/yaskawa_mh5_moveit2/local_setup.dsv
+source;share/yaskawa_mh5_moveit2/local_setup.sh
+source;share/yaskawa_mh5_moveit2/local_setup.zsh

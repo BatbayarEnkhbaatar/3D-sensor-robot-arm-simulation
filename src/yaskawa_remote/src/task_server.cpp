@@ -1,7 +1,6 @@
 #include <functional>
 #include <memory>
 #include <thread>
-
 #include "yaskawa_msgs/action/yaskawa_tasks.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"

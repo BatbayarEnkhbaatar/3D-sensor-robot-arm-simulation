@@ -1,0 +1,8 @@
+setup.py
+yaskawa_remote/__init__.py
+yaskawa_remote/alexa_interface.py
+yaskawa_remote/rest_api_yaskawa.py
+yaskawa_remote.egg-info/PKG-INFO
+yaskawa_remote.egg-info/SOURCES.txt
+yaskawa_remote.egg-info/dependency_links.txt
+yaskawa_remote.egg-info/top_level.txt

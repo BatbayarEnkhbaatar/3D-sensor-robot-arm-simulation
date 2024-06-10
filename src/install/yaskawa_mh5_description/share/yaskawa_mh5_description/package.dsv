@@ -1,0 +1,8 @@
+source;share/yaskawa_mh5_description/hook/cmake_prefix_path.ps1
+source;share/yaskawa_mh5_description/hook/cmake_prefix_path.dsv
+source;share/yaskawa_mh5_description/hook/cmake_prefix_path.sh
+source;share/yaskawa_mh5_description/local_setup.bash
+source;share/yaskawa_mh5_description/local_setup.dsv
+source;share/yaskawa_mh5_description/local_setup.ps1
+source;share/yaskawa_mh5_description/local_setup.sh
+source;share/yaskawa_mh5_description/local_setup.zsh

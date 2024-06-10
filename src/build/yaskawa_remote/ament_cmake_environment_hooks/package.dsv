@@ -1,0 +1,4 @@
+source;share/yaskawa_remote/local_setup.bash
+source;share/yaskawa_remote/local_setup.dsv
+source;share/yaskawa_remote/local_setup.sh
+source;share/yaskawa_remote/local_setup.zsh

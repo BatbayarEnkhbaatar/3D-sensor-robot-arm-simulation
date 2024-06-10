@@ -1,0 +1,556 @@
+[0.135s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.135s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7249a83d6770>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7249a84d6d70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7249a84d6d70>>, mixin_verb=('build',))
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.322s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.323s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.323s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/robot-simulation/src'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extension 'ignore_ament_install'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extensions ['colcon_pkg']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extension 'colcon_pkg'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extensions ['colcon_meta']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extension 'colcon_meta'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extensions ['ros']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extension 'ros'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extensions ['cmake', 'python']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extension 'cmake'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extension 'python'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extensions ['python_setup_py']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud) by extension 'python_setup_py'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extension 'ignore_ament_install'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extensions ['colcon_pkg']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extension 'colcon_pkg'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extensions ['colcon_meta']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extension 'colcon_meta'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extensions ['ros']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(point_cloud_processing) by extension 'ros'
+[0.339s] DEBUG:colcon.colcon_core.package_identification:Package 'point_cloud_processing' with type 'ros.ament_cmake' and name 'point_cloud_processing'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extension 'ignore_ament_install'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extensions ['colcon_pkg']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extension 'colcon_pkg'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extensions ['colcon_meta']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extension 'colcon_meta'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_bringup) by extension 'ros'
+[0.340s] DEBUG:colcon.colcon_core.package_identification:Package 'yaskawa_mh5_bringup' with type 'ros.ament_cmake' and name 'yaskawa_mh5_bringup'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extensions ['colcon_pkg']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extension 'colcon_pkg'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extensions ['colcon_meta']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extension 'colcon_meta'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extensions ['ros']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_controller) by extension 'ros'
+[0.341s] DEBUG:colcon.colcon_core.package_identification:Package 'yaskawa_mh5_controller' with type 'ros.ament_cmake' and name 'yaskawa_mh5_controller'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extension 'ignore_ament_install'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extensions ['colcon_pkg']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extension 'colcon_pkg'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_description) by extension 'ros'
+[0.342s] DEBUG:colcon.colcon_core.package_identification:Package 'yaskawa_mh5_description' with type 'ros.ament_cmake' and name 'yaskawa_mh5_description'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extensions ['colcon_pkg']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extension 'colcon_pkg'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extensions ['colcon_meta']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extension 'colcon_meta'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extensions ['ros']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_mh5_moveit2) by extension 'ros'
+[0.343s] DEBUG:colcon.colcon_core.package_identification:Package 'yaskawa_mh5_moveit2' with type 'ros.ament_cmake' and name 'yaskawa_mh5_moveit2'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extension 'ignore'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extensions ['colcon_pkg']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extension 'colcon_pkg'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extensions ['colcon_meta']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extension 'colcon_meta'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extensions ['ros']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_msgs) by extension 'ros'
+[0.344s] DEBUG:colcon.colcon_core.package_identification:Package 'yaskawa_msgs' with type 'ros.ament_cmake' and name 'yaskawa_msgs'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extensions ['ignore', 'ignore_ament_install']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extension 'ignore'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extension 'ignore_ament_install'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extensions ['colcon_pkg']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extension 'colcon_pkg'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extensions ['colcon_meta']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extension 'colcon_meta'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extensions ['ros']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(yaskawa_remote) by extension 'ros'
+[0.346s] DEBUG:colcon.colcon_core.package_identification:Package 'yaskawa_remote' with type 'ros.ament_cmake' and name 'yaskawa_remote'
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.385s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.390s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 8 installed packages in /home/ubuntu/robot-simulation/install
+[0.391s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 348 installed packages in /opt/ros/humble
+[0.393s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.445s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'yaskawa_mh5_description' is in: /home/ubuntu/robot-simulation/install/yaskawa_mh5_description
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding yaskawa_mh5_description
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'cmake_args' from command line to 'None'
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'cmake_target' from command line to 'None'
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'cmake_clean_cache' from command line to 'False'
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'cmake_clean_first' from command line to 'False'
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'cmake_force_configure' from command line to 'False'
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'ament_cmake_args' from command line to 'None'
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'catkin_cmake_args' from command line to 'None'
+[0.446s] Level 5:colcon.colcon_core.verb:set package 'point_cloud_processing' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.446s] DEBUG:colcon.colcon_core.verb:Building package 'point_cloud_processing' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/robot-simulation/src/build/point_cloud_processing', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/robot-simulation/src/install/point_cloud_processing', 'merge_install': False, 'path': '/home/ubuntu/robot-simulation/src/point_cloud_processing', 'symlink_install': False, 'test_result_base': None}
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'cmake_args' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'cmake_target' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.447s] DEBUG:colcon.colcon_core.verb:Building package 'yaskawa_mh5_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup', 'merge_install': False, 'path': '/home/ubuntu/robot-simulation/src/yaskawa_mh5_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'cmake_args' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'cmake_target' from command line to 'None'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.447s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.448s] DEBUG:colcon.colcon_core.verb:Building package 'yaskawa_mh5_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller', 'merge_install': False, 'path': '/home/ubuntu/robot-simulation/src/yaskawa_mh5_controller', 'symlink_install': False, 'test_result_base': None}
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'cmake_args' from command line to 'None'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'cmake_target' from command line to 'None'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.448s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.448s] DEBUG:colcon.colcon_core.verb:Building package 'yaskawa_mh5_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description', 'merge_install': False, 'path': '/home/ubuntu/robot-simulation/src/yaskawa_mh5_description', 'symlink_install': False, 'test_result_base': None}
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'cmake_target' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.449s] DEBUG:colcon.colcon_core.verb:Building package 'yaskawa_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/robot-simulation/src/build/yaskawa_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs', 'merge_install': False, 'path': '/home/ubuntu/robot-simulation/src/yaskawa_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'cmake_target' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'cmake_clean_first' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'cmake_force_configure' from command line to 'False'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'ament_cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.449s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_mh5_moveit2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.449s] DEBUG:colcon.colcon_core.verb:Building package 'yaskawa_mh5_moveit2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2', 'merge_install': False, 'path': '/home/ubuntu/robot-simulation/src/yaskawa_mh5_moveit2', 'symlink_install': False, 'test_result_base': None}
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'cmake_args' from command line to 'None'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'cmake_target' from command line to 'None'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'cmake_clean_cache' from command line to 'False'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'cmake_clean_first' from command line to 'False'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'cmake_force_configure' from command line to 'False'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'ament_cmake_args' from command line to 'None'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'catkin_cmake_args' from command line to 'None'
+[0.450s] Level 5:colcon.colcon_core.verb:set package 'yaskawa_remote' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.450s] DEBUG:colcon.colcon_core.verb:Building package 'yaskawa_remote' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/robot-simulation/src/build/yaskawa_remote', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/robot-simulation/src/install/yaskawa_remote', 'merge_install': False, 'path': '/home/ubuntu/robot-simulation/src/yaskawa_remote', 'symlink_install': False, 'test_result_base': None}
+[0.450s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.451s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.451s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/robot-simulation/src/yaskawa_mh5_description' with build type 'ament_cmake'
+[0.451s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/robot-simulation/src/yaskawa_mh5_description'
+[0.456s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.456s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.456s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.460s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/robot-simulation/src/yaskawa_msgs' with build type 'ament_cmake'
+[0.461s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/robot-simulation/src/yaskawa_msgs'
+[0.461s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.461s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.465s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/robot-simulation/src/point_cloud_processing' with build type 'ament_cmake'
+[0.465s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/robot-simulation/src/point_cloud_processing'
+[0.466s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.466s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.469s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/robot-simulation/src/yaskawa_mh5_bringup' with build type 'ament_cmake'
+[0.470s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/robot-simulation/src/yaskawa_mh5_bringup'
+[0.470s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.470s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.474s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/robot-simulation/src/yaskawa_mh5_controller' with build type 'ament_cmake'
+[0.474s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/robot-simulation/src/yaskawa_mh5_controller'
+[0.475s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.475s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.485s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_description -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description
+[0.488s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_msgs -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs
+[0.492s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/point_cloud_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/point_cloud_processing -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/point_cloud_processing
+[0.496s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_bringup -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup
+[0.501s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_controller -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller
+[1.733s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_bringup -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup
+[1.733s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup -- -j8 -l8
+[1.747s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_description -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description
+[1.747s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description -- -j8 -l8
+[1.750s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_controller -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller
+[1.751s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller -- -j8 -l8
+[1.792s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup -- -j8 -l8
+[1.808s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description -- -j8 -l8
+[1.813s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller -- -j8 -l8
+[1.842s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup
+[1.846s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description
+[1.849s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller
+[1.862s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_mh5_bringup)
+[1.864s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_bringup
+[1.873s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup' for CMake module files
+[1.874s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup' for CMake config files
+[1.875s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_mh5_bringup', 'cmake_prefix_path')
+[1.875s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/hook/cmake_prefix_path.ps1'
+[1.876s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/hook/cmake_prefix_path.dsv'
+[1.876s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/hook/cmake_prefix_path.sh'
+[1.877s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/bin'
+[1.877s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/lib/pkgconfig/yaskawa_mh5_bringup.pc'
+[1.878s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/lib/python3.10/site-packages'
+[1.878s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/bin'
+[1.878s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.ps1'
+[1.879s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.dsv'
+[1.879s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.sh'
+[1.880s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.bash'
+[1.881s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.zsh'
+[1.881s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/colcon-core/packages/yaskawa_mh5_bringup)
+[1.884s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_mh5_controller)
+[1.885s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller' for CMake module files
+[1.886s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_controller
+[1.888s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller' for CMake config files
+[1.890s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_mh5_controller', 'cmake_prefix_path')
+[1.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/hook/cmake_prefix_path.ps1'
+[1.893s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/hook/cmake_prefix_path.dsv'
+[1.895s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/hook/cmake_prefix_path.sh'
+[1.896s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/bin'
+[1.896s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/lib/pkgconfig/yaskawa_mh5_controller.pc'
+[1.897s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/lib/python3.10/site-packages'
+[1.897s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/bin'
+[1.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.ps1'
+[1.898s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.dsv'
+[1.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.sh'
+[1.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.bash'
+[1.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.zsh'
+[1.900s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/colcon-core/packages/yaskawa_mh5_controller)
+[1.902s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_mh5_description)
+[1.902s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description' for CMake module files
+[1.903s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description
+[1.904s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description' for CMake config files
+[1.904s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_mh5_description', 'cmake_prefix_path')
+[1.905s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/hook/cmake_prefix_path.ps1'
+[1.905s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/hook/cmake_prefix_path.dsv'
+[1.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/hook/cmake_prefix_path.sh'
+[1.906s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/bin'
+[1.907s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/lib/pkgconfig/yaskawa_mh5_description.pc'
+[1.907s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/lib/python3.10/site-packages'
+[1.907s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/bin'
+[1.908s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.ps1'
+[1.909s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.dsv'
+[1.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.sh'
+[1.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.bash'
+[1.911s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.zsh'
+[1.911s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/colcon-core/packages/yaskawa_mh5_description)
+[1.917s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_mh5_bringup)
+[1.917s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup' for CMake module files
+[1.918s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup' for CMake config files
+[1.918s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_mh5_bringup', 'cmake_prefix_path')
+[1.919s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/hook/cmake_prefix_path.ps1'
+[1.919s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/hook/cmake_prefix_path.dsv'
+[1.920s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/hook/cmake_prefix_path.sh'
+[1.921s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/bin'
+[1.921s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/lib/pkgconfig/yaskawa_mh5_bringup.pc'
+[1.921s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/lib/python3.10/site-packages'
+[1.921s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/bin'
+[1.922s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.ps1'
+[1.923s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.dsv'
+[1.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.sh'
+[1.924s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.bash'
+[1.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.zsh'
+[1.926s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/colcon-core/packages/yaskawa_mh5_bringup)
+[1.932s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_mh5_controller)
+[1.932s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller' for CMake module files
+[1.933s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller' for CMake config files
+[1.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_mh5_controller', 'cmake_prefix_path')
+[1.934s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/hook/cmake_prefix_path.ps1'
+[1.934s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/hook/cmake_prefix_path.dsv'
+[1.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/hook/cmake_prefix_path.sh'
+[1.935s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/bin'
+[1.935s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/lib/pkgconfig/yaskawa_mh5_controller.pc'
+[1.936s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/lib/python3.10/site-packages'
+[1.936s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/bin'
+[1.937s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.ps1'
+[1.937s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.dsv'
+[1.938s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.sh'
+[1.938s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.bash'
+[1.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/package.zsh'
+[1.940s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_controller/share/colcon-core/packages/yaskawa_mh5_controller)
+[1.941s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_mh5_description)
+[1.942s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description' for CMake module files
+[1.943s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description' for CMake config files
+[1.943s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_mh5_description', 'cmake_prefix_path')
+[1.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/hook/cmake_prefix_path.ps1'
+[1.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/hook/cmake_prefix_path.dsv'
+[1.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/hook/cmake_prefix_path.sh'
+[1.945s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/bin'
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/lib/pkgconfig/yaskawa_mh5_description.pc'
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/lib/python3.10/site-packages'
+[1.946s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/bin'
+[1.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.ps1'
+[1.948s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.dsv'
+[1.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.sh'
+[1.949s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.bash'
+[1.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.zsh'
+[1.950s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/colcon-core/packages/yaskawa_mh5_description)
+[1.951s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/robot-simulation/src/yaskawa_mh5_moveit2' with build type 'ament_cmake'
+[1.951s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/robot-simulation/src/yaskawa_mh5_moveit2'
+[1.952s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.952s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.967s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_moveit2 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2
+[2.769s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_moveit2 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2
+[2.769s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2 -- -j8 -l8
+[2.813s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2 -- -j8 -l8
+[2.840s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2
+[2.857s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_mh5_moveit2)
+[2.857s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2' for CMake module files
+[2.858s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_moveit2
+[2.858s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2' for CMake config files
+[2.859s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_mh5_moveit2', 'cmake_prefix_path')
+[2.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/hook/cmake_prefix_path.ps1'
+[2.860s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/hook/cmake_prefix_path.dsv'
+[2.860s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/hook/cmake_prefix_path.sh'
+[2.860s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/bin'
+[2.861s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/lib/pkgconfig/yaskawa_mh5_moveit2.pc'
+[2.861s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/lib/python3.10/site-packages'
+[2.861s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/bin'
+[2.861s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.ps1'
+[2.862s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.dsv'
+[2.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.sh'
+[2.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.bash'
+[2.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.zsh'
+[2.863s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/colcon-core/packages/yaskawa_mh5_moveit2)
+[2.890s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_mh5_moveit2)
+[2.890s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2' for CMake module files
+[2.891s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2' for CMake config files
+[2.891s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_mh5_moveit2', 'cmake_prefix_path')
+[2.891s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/hook/cmake_prefix_path.ps1'
+[2.892s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/hook/cmake_prefix_path.dsv'
+[2.892s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/hook/cmake_prefix_path.sh'
+[2.893s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/bin'
+[2.893s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/lib/pkgconfig/yaskawa_mh5_moveit2.pc'
+[2.894s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/lib/python3.10/site-packages'
+[2.894s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/bin'
+[2.895s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.ps1'
+[2.895s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.dsv'
+[2.896s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.sh'
+[2.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.bash'
+[2.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/yaskawa_mh5_moveit2/package.zsh'
+[2.898s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_moveit2/share/colcon-core/packages/yaskawa_mh5_moveit2)
+[3.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_msgs -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs
+[3.248s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_msgs -- -j8 -l8
+[5.131s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/point_cloud_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/point_cloud_processing -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/point_cloud_processing
+[5.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/point_cloud_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/point_cloud_processing -- -j8 -l8
+[7.550s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_msgs -- -j8 -l8
+[7.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_msgs
+[7.749s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_msgs)
+[7.749s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs' for CMake module files
+[7.751s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_msgs
+[7.751s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs' for CMake config files
+[7.753s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_msgs', 'cmake_prefix_path')
+[7.753s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/cmake_prefix_path.ps1'
+[7.754s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/cmake_prefix_path.dsv'
+[7.754s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/cmake_prefix_path.sh'
+[7.755s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib'
+[7.755s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_msgs', 'ld_library_path_lib')
+[7.756s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/ld_library_path_lib.ps1'
+[7.756s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/ld_library_path_lib.dsv'
+[7.757s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/ld_library_path_lib.sh'
+[7.758s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/bin'
+[7.758s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib/pkgconfig/yaskawa_msgs.pc'
+[7.758s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib/python3.10/site-packages'
+[7.758s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/bin'
+[7.759s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.ps1'
+[7.760s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.dsv'
+[7.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.sh'
+[7.761s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.bash'
+[7.762s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.zsh'
+[7.762s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/colcon-core/packages/yaskawa_msgs)
+[7.844s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_msgs)
+[7.845s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs' for CMake module files
+[7.846s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs' for CMake config files
+[7.848s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_msgs', 'cmake_prefix_path')
+[7.848s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/cmake_prefix_path.ps1'
+[7.849s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/cmake_prefix_path.dsv'
+[7.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/cmake_prefix_path.sh'
+[7.850s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib'
+[7.850s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_msgs', 'ld_library_path_lib')
+[7.851s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/ld_library_path_lib.ps1'
+[7.852s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/ld_library_path_lib.dsv'
+[7.852s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/hook/ld_library_path_lib.sh'
+[7.853s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/bin'
+[7.853s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib/pkgconfig/yaskawa_msgs.pc'
+[7.854s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib/python3.10/site-packages'
+[7.854s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/bin'
+[7.855s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.ps1'
+[7.856s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.dsv'
+[7.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.sh'
+[7.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.bash'
+[7.858s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/yaskawa_msgs/package.zsh'
+[7.859s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/share/colcon-core/packages/yaskawa_msgs)
+[7.859s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/robot-simulation/src/yaskawa_remote' with build type 'ament_cmake'
+[7.860s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/robot-simulation/src/yaskawa_remote'
+[7.860s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.860s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.878s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_remote -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_remote
+[15.807s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_remote -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_remote
+[15.809s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_remote -- -j8 -l8
+[25.100s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/point_cloud_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/point_cloud_processing -- -j8 -l8
+[25.154s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/point_cloud_processing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/point_cloud_processing
+[25.174s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(point_cloud_processing)
+[25.175s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing' for CMake module files
+[25.176s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/point_cloud_processing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/point_cloud_processing
+[25.177s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing' for CMake config files
+[25.177s] Level 1:colcon.colcon_core.shell:create_environment_hook('point_cloud_processing', 'cmake_prefix_path')
+[25.178s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/hook/cmake_prefix_path.ps1'
+[25.178s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/hook/cmake_prefix_path.dsv'
+[25.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/hook/cmake_prefix_path.sh'
+[25.180s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/lib'
+[25.180s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/bin'
+[25.180s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/lib/pkgconfig/point_cloud_processing.pc'
+[25.181s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/lib/python3.10/site-packages'
+[25.181s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/bin'
+[25.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.ps1'
+[25.182s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.dsv'
+[25.183s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.sh'
+[25.183s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.bash'
+[25.184s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.zsh'
+[25.184s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/colcon-core/packages/point_cloud_processing)
+[25.235s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(point_cloud_processing)
+[25.235s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing' for CMake module files
+[25.235s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing' for CMake config files
+[25.236s] Level 1:colcon.colcon_core.shell:create_environment_hook('point_cloud_processing', 'cmake_prefix_path')
+[25.236s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/hook/cmake_prefix_path.ps1'
+[25.237s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/hook/cmake_prefix_path.dsv'
+[25.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/hook/cmake_prefix_path.sh'
+[25.238s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/lib'
+[25.238s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/bin'
+[25.238s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/lib/pkgconfig/point_cloud_processing.pc'
+[25.238s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/lib/python3.10/site-packages'
+[25.238s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/bin'
+[25.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.ps1'
+[25.239s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.dsv'
+[25.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.sh'
+[25.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.bash'
+[25.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/point_cloud_processing/package.zsh'
+[25.241s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/point_cloud_processing/share/colcon-core/packages/point_cloud_processing)
+[28.050s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_remote -- -j8 -l8
+[28.089s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_remote
+[28.149s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_remote)
+[28.150s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote' for CMake module files
+[28.150s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_remote
+[28.151s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote' for CMake config files
+[28.151s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_remote', 'cmake_prefix_path')
+[28.151s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/cmake_prefix_path.ps1'
+[28.152s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/cmake_prefix_path.dsv'
+[28.152s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/cmake_prefix_path.sh'
+[28.152s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib'
+[28.152s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_remote', 'ld_library_path_lib')
+[28.153s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/ld_library_path_lib.ps1'
+[28.153s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/ld_library_path_lib.dsv'
+[28.153s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/ld_library_path_lib.sh'
+[28.153s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/bin'
+[28.154s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib/pkgconfig/yaskawa_remote.pc'
+[28.154s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib/python3.10/site-packages'
+[28.154s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/bin'
+[28.154s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.ps1'
+[28.155s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.dsv'
+[28.155s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.sh'
+[28.156s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.bash'
+[28.156s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.zsh'
+[28.156s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/colcon-core/packages/yaskawa_remote)
+[28.191s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yaskawa_remote)
+[28.191s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote' for CMake module files
+[28.192s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote' for CMake config files
+[28.192s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_remote', 'cmake_prefix_path')
+[28.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/cmake_prefix_path.ps1'
+[28.193s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/cmake_prefix_path.dsv'
+[28.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/cmake_prefix_path.sh'
+[28.194s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib'
+[28.194s] Level 1:colcon.colcon_core.shell:create_environment_hook('yaskawa_remote', 'ld_library_path_lib')
+[28.194s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/ld_library_path_lib.ps1'
+[28.194s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/ld_library_path_lib.dsv'
+[28.195s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/hook/ld_library_path_lib.sh'
+[28.195s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/bin'
+[28.195s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib/pkgconfig/yaskawa_remote.pc'
+[28.195s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib/python3.10/site-packages'
+[28.196s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/bin'
+[28.196s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.ps1'
+[28.197s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.dsv'
+[28.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.sh'
+[28.197s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.bash'
+[28.198s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.zsh'
+[28.198s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/colcon-core/packages/yaskawa_remote)
+[28.198s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[28.199s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[28.199s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[28.199s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[28.209s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[28.209s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[28.209s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[28.227s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[28.227s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/robot-simulation/src/install/local_setup.ps1'
+[28.229s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/robot-simulation/src/install/_local_setup_util_ps1.py'
+[28.230s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/robot-simulation/src/install/setup.ps1'
+[28.232s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/robot-simulation/src/install/local_setup.sh'
+[28.233s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/robot-simulation/src/install/_local_setup_util_sh.py'
+[28.234s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/robot-simulation/src/install/setup.sh'
+[28.236s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/robot-simulation/src/install/local_setup.bash'
+[28.237s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/robot-simulation/src/install/setup.bash'
+[28.239s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/robot-simulation/src/install/local_setup.zsh'
+[28.240s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/robot-simulation/src/install/setup.zsh'

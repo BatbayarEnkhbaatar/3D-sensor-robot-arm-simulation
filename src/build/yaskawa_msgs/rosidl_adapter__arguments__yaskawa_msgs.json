@@ -1,0 +1,6 @@
+{
+  "package_name": "yaskawa_msgs",
+  "non_idl_tuples": [
+    "/home/ubuntu/robot-simulation/src/yaskawa_msgs:action/YaskawaTasks.action"
+  ]
+}

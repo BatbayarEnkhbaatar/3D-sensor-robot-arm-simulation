@@ -1,0 +1,50 @@
+[0.012s] Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_remote -- -j8 -l8
+[0.066s] [35m[1mConsolidate compiler generated dependencies of target task_server_node[0m
+[0.067s] [35m[1mConsolidate compiler generated dependencies of target task_server[0m
+[0.087s] [  0%] Built target ament_cmake_python_copy_yaskawa_remote
+[0.089s] [ 50%] Built target task_server_node
+[0.100s] [100%] Built target task_server
+[0.358s] running egg_info
+[0.359s] writing yaskawa_remote.egg-info/PKG-INFO
+[0.359s] writing dependency_links to yaskawa_remote.egg-info/dependency_links.txt
+[0.359s] writing top-level names to yaskawa_remote.egg-info/top_level.txt
+[0.362s] reading manifest file 'yaskawa_remote.egg-info/SOURCES.txt'
+[0.362s] writing manifest file 'yaskawa_remote.egg-info/SOURCES.txt'
+[0.389s] [100%] Built target ament_cmake_python_build_yaskawa_remote_egg
+[0.402s] Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_remote -- -j8 -l8
+[0.436s] Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_remote
+[0.445s] -- Install configuration: ""
+[0.445s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib/yaskawa_remote/task_server_node
+[0.445s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/environment/pythonpath.sh
+[0.446s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/environment/pythonpath.dsv
+[0.446s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote-0.0.0-py3.10.egg-info
+[0.446s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote-0.0.0-py3.10.egg-info/top_level.txt
+[0.446s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.446s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote-0.0.0-py3.10.egg-info/PKG-INFO
+[0.446s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.446s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote
+[0.446s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote/rest_api_yaskawa.py
+[0.446s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote/__init__.py
+[0.446s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote/alexa_interface.py
+[0.480s] Listing '/home/ubuntu/robot-simulation/src/install/yaskawa_remote/local/lib/python3.10/dist-packages/yaskawa_remote'...
+[0.485s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/launch
+[0.485s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/launch/remote_interface.launch.py
+[0.485s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib/yaskawa_remote/rest_api_yaskawa.py
+[0.485s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/lib/libtask_server.so
+[0.485s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/ament_index/resource_index/package_run_dependencies/yaskawa_remote
+[0.485s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/ament_index/resource_index/parent_prefix_path/yaskawa_remote
+[0.486s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/environment/ament_prefix_path.sh
+[0.486s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/environment/ament_prefix_path.dsv
+[0.486s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/environment/path.sh
+[0.486s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/environment/path.dsv
+[0.486s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/local_setup.bash
+[0.486s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/local_setup.sh
+[0.486s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/local_setup.zsh
+[0.486s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/local_setup.dsv
+[0.486s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.dsv
+[0.487s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/ament_index/resource_index/packages/yaskawa_remote
+[0.487s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/ament_index/resource_index/rclcpp_components/yaskawa_remote
+[0.487s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/cmake/yaskawa_remoteConfig.cmake
+[0.487s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/cmake/yaskawa_remoteConfig-version.cmake
+[0.487s] -- Up-to-date: /home/ubuntu/robot-simulation/src/install/yaskawa_remote/share/yaskawa_remote/package.xml
+[0.489s] Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_remote' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_remote:/home/ubuntu/robot-simulation/install/yaskawa_msgs:/home/ubuntu/robot-simulation/install/yaskawa_moveit_2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_moveit2:/home/ubuntu/robot-simulation/install/yaskawa_mh5_description:/home/ubuntu/robot-simulation/install/yaskawa_mh5_controller:/home/ubuntu/robot-simulation/install/yaskawa_mh5_bringup:/home/ubuntu/robot-simulation/install/point_cloud_processing:/opt/ros/humble LD_LIBRARY_PATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ubuntu/robot-simulation/src/install/yaskawa_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_remote

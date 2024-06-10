@@ -1,0 +1,16 @@
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/launch/yaskawa_simulation.launch.py
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/ament_index/resource_index/package_run_dependencies/yaskawa_mh5_bringup
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/ament_index/resource_index/parent_prefix_path/yaskawa_mh5_bringup
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/environment/ament_prefix_path.sh
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/environment/ament_prefix_path.dsv
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/environment/path.sh
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/environment/path.dsv
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/local_setup.bash
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/local_setup.sh
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/local_setup.zsh
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/local_setup.dsv
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.dsv
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/ament_index/resource_index/packages/yaskawa_mh5_bringup
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/cmake/yaskawa_mh5_bringupConfig.cmake
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/cmake/yaskawa_mh5_bringupConfig-version.cmake
+/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_bringup/share/yaskawa_mh5_bringup/package.xml

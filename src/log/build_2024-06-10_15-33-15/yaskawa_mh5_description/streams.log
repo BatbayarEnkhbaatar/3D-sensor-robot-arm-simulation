@@ -1,0 +1,76 @@
+[0.033s] Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_description -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description
+[0.163s] -- The C compiler identification is GNU 11.4.0
+[0.270s] -- The CXX compiler identification is GNU 11.4.0
+[0.284s] -- Detecting C compiler ABI info
+[0.412s] -- Detecting C compiler ABI info - done
+[0.434s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.434s] -- Detecting C compile features
+[0.435s] -- Detecting C compile features - done
+[0.443s] -- Detecting CXX compiler ABI info
+[0.572s] -- Detecting CXX compiler ABI info - done
+[0.592s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.592s] -- Detecting CXX compile features
+[0.593s] -- Detecting CXX compile features - done
+[0.607s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.889s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.075s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.253s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.256s] -- Added test 'lint_cmake' to check CMake code style
+[1.257s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.261s] -- Added test 'xmllint' to check XML markup files
+[1.262s] -- Configuring done
+[1.266s] -- Generating done
+[1.269s] -- Build files have been written to: /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description
+[1.294s] Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ubuntu/robot-simulation/src/yaskawa_mh5_description -DCMAKE_INSTALL_PREFIX=/home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description
+[1.295s] Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description -- -j8 -l8
+[1.356s] Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description -- -j8 -l8
+[1.394s] Invoking command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description
+[1.407s] -- Install configuration: ""
+[1.407s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes
+[1.407s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5
+[1.407s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/visual
+[1.407s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/visual/MH5_R_AXIS.stl
+[1.412s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/visual/MH5_BASE_AXIS.stl
+[1.416s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/visual/MH5_B_AXIS.stl
+[1.417s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/visual/MH5_L_AXIS.stl
+[1.417s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/visual/MH5_U_AXIS.stl
+[1.419s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/visual/MH5_T_AXIS.stl
+[1.421s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/visual/MH5_S_AXIS.stl
+[1.422s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision
+[1.422s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision/BIN_PICKING_MODULE_1CH_ASM.stl
+[1.433s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision/MH5_R_AXIS.stl
+[1.434s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision/MH5_BASE_AXIS.stl
+[1.434s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision/MH5_B_AXIS.stl
+[1.435s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision/MH5_L_AXIS.stl
+[1.435s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision/MH5_U_AXIS.stl
+[1.435s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision/MH5_T_AXIS.stl
+[1.435s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//meshes/mh5/collision/MH5_S_AXIS.stl
+[1.435s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//urdf
+[1.435s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//urdf/mh5_gazebo.urdf.xacro
+[1.436s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//urdf/mh5.urdf.xacro
+[1.436s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//urdf/mh5_ros2_controller.urdf.xacro
+[1.436s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//launch
+[1.436s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//launch/display.launch.py
+[1.437s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//launch/gazebo.launch.py
+[1.437s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//rviz
+[1.437s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//rviz/display.rviz
+[1.438s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//motoman_resources
+[1.438s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//motoman_resources/models
+[1.438s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//motoman_resources/models/common_materials.xacro
+[1.438s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description//motoman_resources/models/common_colors.xacro
+[1.439s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/ament_index/resource_index/package_run_dependencies/yaskawa_mh5_description
+[1.439s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/ament_index/resource_index/parent_prefix_path/yaskawa_mh5_description
+[1.440s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/environment/ament_prefix_path.sh
+[1.441s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/environment/ament_prefix_path.dsv
+[1.441s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/environment/path.sh
+[1.441s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/environment/path.dsv
+[1.442s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/local_setup.bash
+[1.442s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/local_setup.sh
+[1.442s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/local_setup.zsh
+[1.442s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/local_setup.dsv
+[1.443s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.dsv
+[1.443s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/ament_index/resource_index/packages/yaskawa_mh5_description
+[1.443s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/cmake/yaskawa_mh5_descriptionConfig.cmake
+[1.443s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/cmake/yaskawa_mh5_descriptionConfig-version.cmake
+[1.443s] -- Installing: /home/ubuntu/robot-simulation/src/install/yaskawa_mh5_description/share/yaskawa_mh5_description/package.xml
+[1.451s] Invoked command in '/home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ubuntu/robot-simulation/src/build/yaskawa_mh5_description
