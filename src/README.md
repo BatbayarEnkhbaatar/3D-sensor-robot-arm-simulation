@@ -1,5 +1,5 @@
 
-# 3D Sensor Robot Arm Simulation
+# Robot Arm Simulation with 3D Sensor
 
 ## Pre-Requisites
 
