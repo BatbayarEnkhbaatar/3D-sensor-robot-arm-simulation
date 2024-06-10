@@ -1,18 +1,17 @@
-# 3D-sensor-robot-arm-simulation
 
+# 3D Sensor Robot Arm Simulation
 
+## Pre-Requisites
 
-# Pre-Requisites
+- Moveit2
+- ROS2
+- ROS2 Controller Library
+- ROS2 Gazebo Controller Library
+- Gazebo-Ros
 
-# Moveit2
-# Ros2
-# Ros2 Controller Library
-# Ros2 Gazebo Conrtoller Library
-# Gazebo-Ros
+## Commands
 
-
-
-# Commands
+```bash
 sudo apt-get update
 
 sudo apt-get install ros-humble-joint-state-publisher-gui
