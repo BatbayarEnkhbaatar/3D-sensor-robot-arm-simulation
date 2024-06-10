@@ -2,9 +2,9 @@
 # Robot Arm Simulation with 3D Sensor
 
 ## Pre-Requisites
-
+- Ubuntu 22.04
 - Moveit2
-- ROS2
+- ROS2-Humble
 - ROS2 Controller Library
 - ROS2 Gazebo Controller Library
 - Gazebo-Ros
