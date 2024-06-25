@@ -1,0 +1,12 @@
+# RotobicTasks.action
+
+# Goal definition
+string task_commands
+
+---
+# Result definition
+bool success
+
+---
+# Feedback definition
+string feedback
