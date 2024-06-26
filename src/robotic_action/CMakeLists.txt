@@ -7,9 +7,6 @@ endif()
 
 # Find dependencies
 find_package(ament_cmake REQUIRED)
-# Uncomment the following section in order to fill in further dependencies manually.
-# find_package(<dependency> REQUIRED)
-
 find_package(ament_cmake_python REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
@@ -18,9 +15,6 @@ find_package(robotic_msgs REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclpy REQUIRED)
 
-# PyTorch implementation
-find_package(Torch REQUIRED)
-include_directories(${TORCH_INCLUDE_DIRS})
 
 add_library(task_server SHARED src/task_server.cpp)
 
@@ -31,7 +25,7 @@ target_include_directories(task_server PRIVATE
 target_compile_definitions(task_server
   PRIVATE "TASK_SERVER_CPP_BUILDING_DLL"
 )
-target_link_libraries(task_server "${TORCH_LIBRARIES}")
+
 
 ament_target_dependencies(task_server
   "robotic_msgs"
