@@ -3,7 +3,7 @@
 #include  "robotic_msgs/action/robotic_tasks.hpp"
 #include "rclcpp_components/register_node_macro.hpp" 
 // #include "robotic_msgs/robotic_msgs/action/robotic_tasks.hpp"
-#include "torch/torch.h"
+// #include "torch/torch.h"
 using RoboticTasks = robotic_msgs::action::RoboticTasks;
 using namespace std::placeholders;
 using RoboticGoalHandle = rclcpp_action::ServerGoalHandle<RoboticTasks>;
@@ -43,7 +43,7 @@ private:
     // goal_cancel
     rclcpp_action::CancelResponse goal_cancel(const std::shared_ptr<RoboticGoalHandle> goal_handle) {
         auto goal = goal_handle->get_goal();
-        RCLCPP_INFO(this->get_logger(), "Received request to cancel goal: %s", goal->task_commands.c_str());
+        RCLCPP_INFO(this->get_logger(), "Received request to cancel goal");
         return rclcpp_action::CancelResponse::ACCEPT;
     }
 
