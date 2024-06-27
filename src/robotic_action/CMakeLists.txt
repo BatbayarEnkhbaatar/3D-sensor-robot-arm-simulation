@@ -33,6 +33,7 @@ ament_target_dependencies(task_server
   "rclcpp_action"
   "rclcpp_components"
   "moveit_ros_planning_interface"
+
 )
 
 rclcpp_components_register_node(task_server
@@ -49,7 +50,14 @@ install(
 install(
   PROGRAMS
   robotic_action/rest_api.py
+  robotic_action/robotic_transformer_pytorch/robotic_transformer_pytorch.py
+  robotic_action/robotic_transformer_pytorch/tr1_model1.pt
   DESTINATION lib/${PROJECT_NAME}
+)
+install(
+  DIRECTORY robotic_transformer_pytorch/
+  DESTINATION lib/${PROJECT_NAME}/robotic_transformer_pytorch
+  FILES_MATCHING PATTERN "*.py"
 )
 
 install(TARGETS
