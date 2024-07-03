@@ -51,7 +51,7 @@ install(
   PROGRAMS
   robotic_action/rest_api.py
   robotic_action/robotic_transformer_pytorch/robotic_transformer_pytorch.py
-  robotic_action/robotic_transformer_pytorch/tr1_model1.pt
+  robotic_action/robotic_transformer_pytorch/rt1_v1.pt
   DESTINATION lib/${PROJECT_NAME}
 )
 install(
