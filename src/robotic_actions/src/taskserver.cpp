@@ -21,7 +21,7 @@ public:
             std::bind(&TaskServer::cancelCallback, this, _1),
             std::bind(&TaskServer::acceptCallback, this, _1)
         );
-        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Starting the Action Server");
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Starting the Action Server...");
     }
 
 private:
@@ -66,7 +66,7 @@ private:
         // else if (goal_handle->get_goal()->task_number == 2)
         // {
         //     arm_joint_goal = {0.15, 1.5, 0.0, 0.0, 0.0, 0.0};
-        // }
+        // } %d", goal->
         // else
         // {
         //     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Invalid task number!!!!");

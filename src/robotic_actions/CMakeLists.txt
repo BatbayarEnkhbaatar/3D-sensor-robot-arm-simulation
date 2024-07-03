@@ -34,7 +34,30 @@ ament_target_dependencies(taskserver
   rclcpp_components_register_node(taskserver
   PLUGIN "RoboticTasks::TaskServer"
   EXECUTABLE taskservernode)
-
+install(
+    DIRECTORY launch
+    DESTINATION share/${PROJECT_NAME}
+  )
+install(
+    PROGRAMS
+    robotic_actions/rest_api.py
+    DESTINATION lib/${PROJECT_NAME}/robotic_actions
+  )
+  install(
+    PROGRAMS
+    robotic_actions/robotic_transformer_pytorch/robotic_transformer_pytorch.py
+    DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
+  )
+  install(
+    PROGRAMS
+    robotic_actions/robotic_transformer_pytorch/pytorch_launch.py
+    DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
+  )
+  install(
+    PROGRAMS
+    robotic_actions/robotic_transformer_pytorch/rt1_v1.pt
+    DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
+  )
 install(TARGETS
   taskserver
   ARCHIVE DESTINATION lib
