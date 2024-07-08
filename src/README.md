@@ -23,6 +23,8 @@ sudo apt-get install ros-humble-ros2-controllers
 sudo apt-get install ros-humble-gazebo-ros2-control
 sudo apt-get install ros-humble-moveit
 sudo apt-get install ros-humble-ros-control ros-humble-ros-controllers
+sudo apt install ros-humble-gazebo-ros-pkgs
+
 ``` 
 
 ## Commands to install FLASK 

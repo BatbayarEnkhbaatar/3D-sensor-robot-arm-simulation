@@ -7,8 +7,13 @@
   
   <xacro:include filename="$(find yaskawa_mh5_description)/urdf/mh5_gazebo.urdf.xacro"/>
   <xacro:include filename="$(find yaskawa_mh5_description)/urdf/mh5_ros2_controller.urdf.xacro"/>
+  <xacro:include filename="$(find yaskawa_mh5_description)/urdf/TesseraVue_3D_sensor.urdf.xacro"/>
+  <xacro:include filename="$(find yaskawa_mh5_description)/urdf/grippers.urdf.xacro"/>
 
 <!-- macro function for inertial-->
+  <xacro:property name="effort" value="30.0"/>
+  <xacro:property name="velocity" value="10.0"/>
+  <xacro:property name="PI" value="3.14159"/>
 
 	<xacro:macro name="default_inertial" params="mass">
 		<inertial>
@@ -39,7 +44,8 @@
   <link name="base_link">
     <xacro:default_inertial mass="1.0"/>
     <visual>
-      <origin rpy="0 0 3.14159"/>
+     <origin rpy="0 0 0"/> 
+
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_BASE_AXIS.stl"/>
       </geometry>
@@ -57,55 +63,6 @@
       </material>
     </collision>
   </link>
-
-
-<!-- Camera Pole Link -->
-<!-- <link name="camera_pole">
-  <xacro:default_inertial mass="0.5"/>
-  <visual>
-    <origin xyz="1 0 0"/>
-    <geometry>
-      <cylinder length="1.0" radius="0.05"/>
-    </geometry>
-    <material name="grey">
-      <color rgba="0.5 0.5 0.5 1.0"/>
-    </material>
-  </visual>
-  <collision>
-    <origin xyz="1 0 0"/>
-    <geometry>
-      <cylinder length="1.0" radius="0.05"/>
-    </geometry>
-  </collision>
-</link> -->
-
-<!-- Depth Camera Link -->
-<!-- 
-<link name="depth_camera">
-  <xacro:default_inertial mass="0.5"/>
-  <visual>
-    <geometry>
-      <box size="0.2 0.4 0.1"/>
-    </geometry>
-    <material name="black">
-      <color rgba="0.0 0.0 0.0 1.0"/>
-    </material>
-  </visual>
-  <collision>
-    <geometry>
-      <box size="0.2 0.4 0.1"/>
-    </geometry>
-  </collision>
-</link> -->
-
-
-<!-- Joint between camera pole and depth camera -->
-<!-- <joint name="pole_to_camera" type="fixed">
-  <parent link="camera_pole"/>
-  <child link="depth_camera"/>
-  <origin xyz="0 0 0.95" rpy="0 0 0"/>
-  <axis xyz="0 1.5 0"/> 
-</joint>  -->
 
   <link name="link_s">
     <xacro:default_inertial mass="1.0"/>
@@ -127,24 +84,23 @@
   <link name="link_l">
     <xacro:default_inertial mass="1.0"/>
     <visual>
-      <!-- <origin rpy="1.57 3.1416 0" xyz="0 0 0"/> -->
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_L_AXIS.stl"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
-      <!-- <origin rpy="1.57 3.1416 0" xyz="0 0 0"/> -->
+
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_L_AXIS.stl"/>
       </geometry>
       <material name="yellow"/>
-      robot</collision>
+      </collision>
   </link>
   <link name="link_u">
     <xacro:default_inertial mass="1.0"/>
     <visual>
-      <!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
+
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_U_AXIS.stl"/>
       </geometry>
@@ -174,35 +130,15 @@
     </collision>
   </link>
 
-<!-- 3D sensor  -->
-  <link name="3d_camera">
-    <xacro:default_inertial mass="0.5"/>
-    <visual>
-      <geometry>
-          <mesh filename = "package://yaskawa_mh5_description/meshes/mh5/collision/BIN_PICKING_MODULE_1CH_ASM.stl" scale="0.001 0.001 0.001"/>
-      </geometry>
-      <material name="silver"/>
-    </visual>
-    <collision>
-      <geometry>
-        <mesh filename = "package://yaskawa_mh5_description/meshes/mh5/collision/BIN_PICKING_MODULE_1CH_ASM.stl" scale="0.001 0.001 0.001"/>
-      </geometry>
-      <material name="silver"/>
-    </collision>
-  </link>
-
-
   <link name="link_b">
     <xacro:default_inertial mass="1.0"/>
     <visual>
-
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_B_AXIS.stl"/>
       </geometry>
       <material name="blue"/>
     </visual>
     <collision>
-
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/MH5_B_AXIS.stl"/>
       </geometry>
@@ -224,7 +160,26 @@
       <material name="yellow"/>
     </collision>
   </link>
+<!-- Fingers Visualization on Gazebo  -->
+    <!-- <link name="gripper_right">
+        <visual>
+            <origin xyz="00.04 0.5 -0.1" rpy = "0 0 -${PI/2}" />
+            <geometry>
+                <mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/finger_right.stl" scale="0.002 0.005 0.005" />
+            </geometry>
+        </visual>
+    </link>
 
+    <link name="gripper_left">
+        <visual>
+        <origin xyz="00.04 0.5 -0.1" rpy = "0 0 -${PI/2}"/>
+            <geometry>
+                <mesh filename="package://yaskawa_mh5_description/meshes/mh5/collision/finger_left.stl" scale="0.002 0.005 0.005" />
+            </geometry>
+        </visual>
+    </link> -->
+
+<!-- END Fingers Visualization on Gazebo  -->
   <joint name="virtual_joint" type="fixed">
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
     <parent link="world"/>
@@ -232,28 +187,29 @@
     <axis xyz="0.0 0.0 0.0"/>
     <limit lower="0.0" upper="0.0" effort="0.0" velocity="0.0"/>
   </joint> 
-  <!-- Joint between link_r and camera  -->
-  <joint name="joint_3d_camera" type="fixed">
-    <parent link="link_r"/>
-    <child link="3d_camera"/>
-    <origin xyz="0.0715 0 0.08" rpy="1.5708 0 1.5708"/>
-  </joint>
 
   <joint name="joint_s" type="revolute">
 
     <parent link="base_link"/>
     <child link="link_s"/>
     <origin rpy="0 0 0" xyz="0 0 0.1990"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="100" lower="-2.9671" upper="2.9671" velocity="2.96"/>
-  </joint>
-  <joint name="joint_l" type="revolute">
+    <axis xyz="0 0 1"/>  
     <parent link="link_s"/>
     <child link="link_l"/>
     <origin rpy="0 0 0" xyz="0.0880 0 0.1310"/>
     <axis xyz="0 1 0"/>
     <limit effort="100" lower="-1.1345" upper="2.6180" velocity="2.96"/>
   </joint>
+
+    <joint name="joint_l" type="revolute">
+    <parent link="link_s"/>
+    <child link="link_l"/>
+    <origin rpy="0 0 0" xyz="0.0880 0 0.1310"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="100" lower="-1.1345" upper="2.6180" velocity="2.96"/>
+  </joint>
+
+
   <joint name="joint_u" type="revolute">
     <parent link="link_l"/>
     <child link="link_u"/>
@@ -269,8 +225,6 @@
     <axis xyz="-1 0 0"/>
     <limit effort="100" lower="-3.3161" upper="3.3161" velocity="3.48"/>
   </joint>
-
-
   <joint name="joint_b" type="revolute">
     <parent link="link_r"/>
     <child link="link_b"/>
@@ -286,13 +240,33 @@
     <limit effort="100" lower="-6.2831" upper="6.2831" velocity="6.97"/>
   </joint>
 
+    <!-- Gripper joints -->
+    <!-- <joint name="joint_a" type="revolute">
+        <parent link="link_t"/>
+        <child link="gripper_right"/>
+        <axis xyz="0 0 1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <limit lower="-1.5708" upper="0.0" effort="100" velocity="3.48"/>
+    </joint>
+    
+    <joint name="joint_y" type="revolute">
+        <parent link="link_t"/>
+        <child link="gripper_left"/>
+        <axis xyz="0 0 1"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <limit lower="0.0" upper="1.5708" effort="100" velocity="3.48"/>
+        <mimic joint="joint_a" multiplier="-1"/>
+    </joint> -->
 
+        <!-- END OF Gripper joints -->
   <!-- Define transmissions -->
     <xacro:default_transmission number="s"/>
     <xacro:default_transmission number="l"/>
     <xacro:default_transmission number="u"/>
     <xacro:default_transmission number="r"/>
     <xacro:default_transmission number="b"/>
-    <xacro:default_transmission number="t"/>    
+    <xacro:default_transmission number="t"/>  
+    <!-- <xacro:default_transmission number="a"/>
+    <xacro:default_transmission number="y"/>     -->
 
 </robot>
