@@ -1,0 +1,5 @@
+# ignore the model source folder
+*.pt
+*.pth
+#ignore model folders
+/model
