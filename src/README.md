@@ -27,7 +27,7 @@ sudo apt install ros-humble-gazebo-ros-pkgs
 
 ``` 
 
-## Commands to install FLASK 
+## Commands to install Cuda for the GPU  
 
 ```bash
 
