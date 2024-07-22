@@ -53,7 +53,7 @@ class TaskClient(Node):
             return last_file
         else:
             return None
-        return get_result_future.result().result
+    
 
 def main(args=None):
     rclpy.init(args=args)
@@ -67,8 +67,19 @@ def main(args=None):
     image = np.tile(np.asarray(Image.open(lastframe_path)), (15,1,1,1))
     # print(image)
     actions_result = load_policy.main(inputText=command_input, obvers=lastframe_path)
-    action_client.send_goal_async(actions_result)
+    print("Action Result: ")
     print(actions_result)
+
+    ac_seq = [float(i) for i in actions_result]
+
+    # Send the goal to the action server
+    result = action_client.send_goal(ac_seq)
+
+    if result:
+        print("Action Result: ", result)
+    else:
+        print("Failed to get result from action server.")
+
     # print(actions_result)
     action_client.destroy_node()
     rclpy.shutdown()
