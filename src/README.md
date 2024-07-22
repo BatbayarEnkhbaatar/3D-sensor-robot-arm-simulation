@@ -56,7 +56,7 @@ Thu Jan  4 11:24:58 2024
 
 
 # CUDA 12.X installation
-$ pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
 #### OR ####
 
@@ -67,4 +67,5 @@ pip install --upgrade "jax[cuda11_pip]" -f https://storage.googleapis.com/jax-re
 
 python -c "import jax; print(f'Jax backend: {jax.default_backend()}')"
 Jax backend: gpu 
+
 ``` 
