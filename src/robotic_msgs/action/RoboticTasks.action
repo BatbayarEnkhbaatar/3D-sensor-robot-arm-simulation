@@ -1,12 +1,13 @@
 # RotobicTasks.action
 
-# Goal definition
-string task_commands
+# Goal 
+float64[] task_sequences
 
 ---
-# Result definition
+# Result 
 bool success
 
 ---
-# Feedback definition
-string feedback
+# Feedback 
+string feedbackmsg
+
