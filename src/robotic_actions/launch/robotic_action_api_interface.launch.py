@@ -8,11 +8,11 @@ def generate_launch_description():
         executable="taskservernode"
     )
 
-    rest_api =Node(
-        package="robotic_actions",
-        executable="rest_api.py"
-    )
+    # rest_api =Node(
+    #     package="robotic_actions",
+    #     executable="rest_api.py"
+    # )
     return LaunchDescription([
         taskservernode,
-        rest_api
+        # rest_api
 ])
