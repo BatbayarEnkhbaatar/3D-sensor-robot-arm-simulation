@@ -68,4 +68,13 @@ pip install --upgrade "jax[cuda11_pip]" -f https://storage.googleapis.com/jax-re
 python -c "import jax; print(f'Jax backend: {jax.default_backend()}')"
 Jax backend: gpu 
 
+
+# Instruction order to launch the simulation
+
+1. ros2 launch yaskawa_mh5_description gazebo.launch.py
+2. ros2 launch yaskawa_mh5_controller controller.launch.py
+3. ros2 launch yaskawa_mh5_moveit2 moveit.launch.py
+4. ros2 launch robotic_opencv opencv_subs.launch.py
+5. ros2 run robotic_actions taskservernode
+6. ros2 run robotic_ai_model task_client
 ``` 
