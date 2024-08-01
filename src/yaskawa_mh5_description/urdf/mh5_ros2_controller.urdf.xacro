@@ -1,12 +1,14 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="yaskawa_mh5lf">
+
     <xacro:property name="PI" value="3.14159"/>
-    <!-- <xacro:include filename="$(find yaskawa_mh5_description)/urdf/robotiq_85_gripper.transmission.xacro"/> -->
+
     <ros2_control name="RobotSystem" type="system">
         <hardware>
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
 
+        <!-- Robot Arm Joints -->
         <joint name="joint_s">
             <command_interface name="position">
                 <param name="min">-${PI/2}</param>
@@ -15,7 +17,7 @@
             <state_interface name="position"/>
         </joint>
 
-        <joint name="joint_l"><xacro:property name="PI" value="3.14159"/>
+        <joint name="joint_l">
             <command_interface name="position">
                 <param name="min">-${PI/2}</param>
                 <param name="max">${PI/2}</param>
@@ -25,7 +27,7 @@
 
         <joint name="joint_u">
             <command_interface name="position">
-                <param name="min">-${PI/2}</param><xacro:property name="PI" value="3.14159"/>
+                <param name="min">-${PI/2}</param>
                 <param name="max">${PI/2}</param>
             </command_interface>
             <state_interface name="position"/>
@@ -54,6 +56,73 @@
             </command_interface>
             <state_interface name="position"/>
         </joint>
+
+        <!-- Gripper Joints -->
+        <joint name="robotiq_85_left_knuckle_joint">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+            <command_interface name="position" />
+            <state_interface name="position"/>
+        </joint>
+
+        <joint name="robotiq_85_right_knuckle_joint">
+            <param name="mimic">robotiq_85_left_knuckle_joint</param>
+            <param name="multiplier">1</param>
+             <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+
+        <joint name="robotiq_85_left_inner_knuckle_joint">
+            <param name="mimic">robotiq_85_left_knuckle_joint</param>
+            <param name="multiplier">1</param>
+           <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
         
+
+
+
+        <joint name="robotiq_85_right_inner_knuckle_joint">
+            <param name="mimic">robotiq_85_left_knuckle_joint</param>
+            <param name="multiplier">1</param>
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+
+        <joint name="robotiq_85_left_finger_tip_joint">
+            <param name="mimic">robotiq_85_left_knuckle_joint</param>
+            <param name="multiplier">-1</param>
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+
+
+        <joint name="robotiq_85_right_finger_tip_joint">
+            <param name="mimic">robotiq_85_left_knuckle_joint</param>
+            <param name="multiplier">-1</param>
+            <command_interface name="position">
+                <param name="min">-${PI/2}</param>
+                <param name="max">${PI/2}</param>
+            </command_interface>
+            <state_interface name="position"/>
+        </joint>
+
+
+
     </ros2_control>
 </robot>

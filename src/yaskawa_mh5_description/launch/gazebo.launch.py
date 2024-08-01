@@ -35,11 +35,12 @@ def generate_launch_description():
         parameters=[{"robot_description": robot_description}]
     )
     
+    
 
     start_gazebo_server = IncludeLaunchDescription(PythonLaunchDescriptionSource(os.path.join(
-        get_package_share_directory("gazebo_ros"), "launch", "gzserver.launch.py")),
-        launch_arguments={
-            'world': LaunchConfiguration('world')}.items()
+        get_package_share_directory("gazebo_ros"), "launch", "gzserver.launch.py"))
+        #    launch_arguments={
+        #     'world': LaunchConfiguration('world')}.items()
         )
     start_gazebo_client = IncludeLaunchDescription(PythonLaunchDescriptionSource(os.path.join(
         get_package_share_directory("gazebo_ros"), "launch", "gzclient.launch.py")))
@@ -54,7 +55,7 @@ def generate_launch_description():
     return LaunchDescription([
         env_variable,
         model_arg,
-        world_arg,
+        # world_arg,
         robot_state_publisher_node,
         start_gazebo_server,
         start_gazebo_client,

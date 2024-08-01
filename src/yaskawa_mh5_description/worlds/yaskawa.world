@@ -113,7 +113,7 @@
           <pose>0 0 0 0 -0 3.14159</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_BASE_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -132,10 +132,10 @@
           </surface>
         </collision>
         <visual name='base_link_visual'>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 3.14159</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_BASE_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -151,8 +151,8 @@
         <axis>
           <xyz>0 0 1</xyz>
           <limit>
-            <lower>-1.1345</lower>
-            <upper>2.618</upper>
+            <lower>-2.9671</lower>
+            <upper>2.9671</upper>
             <effort>100</effort>
             <velocity>2.96</velocity>
           </limit>
@@ -180,7 +180,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_S_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -202,7 +202,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_S_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -212,7 +212,7 @@
         <kinematic>0</kinematic>
       </link>
       <joint name='joint_l' type='revolute'>
-        <pose relative_to='link_s'>0.088 0 0.131 0 -0 0</pose>
+        <pose relative_to='link_s'>0.176 0 0.262 0 -0 0</pose>
         <parent>link_s</parent>
         <child>link_l</child>
         <axis>
@@ -247,7 +247,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_L_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -269,7 +269,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_L_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -279,7 +279,7 @@
         <kinematic>0</kinematic>
       </link>
       <joint name='joint_u' type='revolute'>
-        <pose relative_to='link_l'>0 0 0.31 0 -0 0</pose>
+        <pose relative_to='link_l'>0 0 0.62 0 -0 0</pose>
         <parent>link_l</parent>
         <child>link_u</child>
         <axis>
@@ -314,7 +314,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_U_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -336,7 +336,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_U_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -346,7 +346,7 @@
         <kinematic>0</kinematic>
       </link>
       <joint name='joint_r' type='revolute'>
-        <pose relative_to='link_u'>0.0715 0 0.0399 0 -0 0</pose>
+        <pose relative_to='link_u'>0.143 0 0.0798 0 -0 0</pose>
         <parent>link_u</parent>
         <child>link_r</child>
         <axis>
@@ -366,22 +366,22 @@
       <link name='link_r'>
         <pose relative_to='joint_r'>0 0 0 0 -0 0</pose>
         <inertial>
-          <pose>0.05075 0.019125 0.04 0 -0 0</pose>
+          <pose>0.13075 0.049 0.0575 0 -0 0</pose>
           <mass>2</mass>
           <inertia>
-            <ixx>3.00539</ixx>
-            <ixy>-0.00308869</ixy>
-            <ixz>-0.00405999</ixz>
-            <iyy>3.00925</iyy>
-            <iyz>-0.00153</iyz>
-            <izz>3.00825</izz>
+            <ixx>3.01494</ixx>
+            <ixy>-0.0219337</ixy>
+            <ixz>-0.021686</ixz>
+            <iyy>3.07813</iyy>
+            <iyz>-0.007315</iyz>
+            <izz>3.0774</izz>
           </inertia>
         </inertial>
         <collision name='link_r_collision'>
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_R_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -400,10 +400,10 @@
           </surface>
         </collision>
         <collision name='link_r_fixed_joint_lump__tesseravue_chassis_link_collision_1'>
-          <pose>0.0715 0 0.08 1.5708 -0 1.5708</pose>
+          <pose>0.0715 0.05 0.08 1.5708 -0 1.5708</pose>
           <geometry>
             <mesh>
-              <scale>0.001 0.001 0.001</scale>
+              <scale>0.0015 0.0015 0.0015</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/BIN_PICKING_MODULE_1CH_ASM.stl</uri>
             </mesh>
           </geometry>
@@ -425,22 +425,22 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_R_AXIS.stl</uri>
             </mesh>
           </geometry>
         </visual>
         <visual name='link_r_fixed_joint_lump__tesseravue_chassis_link_visual_1'>
-          <pose>0.0715 0 0.08 1.5708 -0 1.5708</pose>
+          <pose>0.3715 0.050001 0.129999 1.5708 -0 1.5708</pose>
           <geometry>
             <mesh>
-              <scale>0.001 0.001 0.001</scale>
+              <scale>0.0015 0.0015 0.0015</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/BIN_PICKING_MODULE_1CH_ASM.stl</uri>
             </mesh>
           </geometry>
         </visual>
         <visual name='link_r_fixed_joint_lump__tesseravue_camera_link_visual_2'>
-          <pose>0.1315 0.0765 0.08 1.5708 4e-06 0</pose>
+          <pose>0.4515 0.146001 0.149999 1e-06 4e-06 5e-06</pose>
           <geometry>
             <cylinder>
               <length>0.001</length>
@@ -454,8 +454,8 @@
           <camera name='TesseraVue'>
             <horizontal_fov>1.089</horizontal_fov>
             <image>
-              <width>800</width>
-              <height>800</height>
+              <width>3840</width>
+              <height>2160</height>
               <format>R8G8B8</format>
             </image>
             <clip>
@@ -468,14 +468,14 @@
             <min_depth>0.1</min_depth>
             <max_depth>100.0</max_depth>
           </plugin>
-          <pose>0.1315 0.0765 0.08 1.5708 4e-06 0</pose>
+          <pose>0.4515 0.146001 0.149999 1e-06 4e-06 5e-06</pose>
         </sensor>
         <self_collide>0</self_collide>
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
       <joint name='joint_b' type='revolute'>
-        <pose relative_to='link_r'>0.2335 0 0 0 -0 0</pose>
+        <pose relative_to='link_r'>0.467 0 0 0 -0 0</pose>
         <parent>link_r</parent>
         <child>link_b</child>
         <axis>
@@ -510,7 +510,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_B_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -532,7 +532,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_B_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -542,11 +542,11 @@
         <kinematic>0</kinematic>
       </link>
       <joint name='joint_t' type='revolute'>
-        <pose relative_to='link_b'>0.0865 0 0 0 -0 0</pose>
+        <pose relative_to='link_b'>0.173 0 0 0 -0 0</pose>
         <parent>link_b</parent>
         <child>link_t</child>
         <axis>
-          <xyz>-1 0 0</xyz>
+          <xyz>0 -1 0</xyz>
           <limit>
             <lower>-6.2831</lower>
             <upper>6.2831</upper>
@@ -577,7 +577,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_T_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -599,7 +599,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <scale>1 1 1</scale>
+              <scale>2 2 2</scale>
               <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_T_AXIS.stl</uri>
             </mesh>
           </geometry>
@@ -612,9 +612,58 @@
       <plugin name='gazebo_ros2_control' filename='libgazebo_ros2_control.so'>
         <robot_param>robot_description</robot_param>
         <robot_param_node>robot_state_publisher</robot_param_node>
-        <parameters>/home/ubuntu/ros2-dev/3D-sensor-robot-arm-simulation/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/config/mh5_ros2_controller.yaml</parameters>
+        <parameters>/home/ubuntu/ros2-dev/simulator/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/config/mh5_ros2_controller.yaml</parameters>
       </plugin>
       <pose>0 0 0 0 -0 0</pose>
+    </model>
+    <model name='bowl'>
+      <link name='link'>
+        <inertial>
+          <pose>0 0 0.0175 0 -0 0</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000250308</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000250308</iyy>
+            <iyz>0</iyz>
+            <izz>0.0004802</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0.0175 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.098</radius>
+              <length>0.035</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://bowl/meshes/bowl.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>1.15072 0.352392 0 0 -0 0</pose>
     </model>
     <model name='beer'>
       <link name='link'>
@@ -671,56 +720,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.844715 0.155051 0 0 -0 0</pose>
-    </model>
-    <model name='bowl'>
-      <link name='link'>
-        <inertial>
-          <pose>0 0 0.0175 0 -0 0</pose>
-          <mass>0.1</mass>
-          <inertia>
-            <ixx>0.000250308</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.000250308</iyy>
-            <iyz>0</iyz>
-            <izz>0.0004802</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <pose>0 0 0.0175 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.098</radius>
-              <length>0.035</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://bowl/meshes/bowl.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>0.56985 0.060702 0 0 -0 0</pose>
+      <pose>1.22306 0.028985 0 0 -0 0</pose>
     </model>
     <model name='coke_can'>
       <link name='link'>
@@ -777,7 +777,63 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.627424 -0.646476 0 0 -0 0</pose>
+      <pose>1.58274 -0.079264 0 0 -0 0</pose>
+    </model>
+    <model name='disk_part'>
+      <link name='link'>
+        <inertial>
+          <pose>0 0 0.02895 0 -0 0</pose>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.00321218</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00321218</iyy>
+            <iyz>0</iyz>
+            <izz>0.00614499</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <pose>0 0 0.02895 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.0579</length>
+              <radius>0.15678</radius>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://disk_part/meshes/disk.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://arm_part/materials/scripts</uri>
+              <uri>model://arm_part/materials/textures</uri>
+              <name>ArmPart/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>1.13688 -0.318232 0 0 -0 0</pose>
     </model>
     <model name='coke_can_0'>
       <link name='link'>
@@ -834,51 +890,61 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.574492 0.073599 0 0 -0 0</pose>
+      <pose>1.51873 -0.398987 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>93 390000000</sim_time>
-      <real_time>94 434371417</real_time>
-      <wall_time>1720383292 572220885</wall_time>
-      <iterations>93390</iterations>
+      <sim_time>423 522000000</sim_time>
+      <real_time>425 526716061</real_time>
+      <wall_time>1721937368 498754306</wall_time>
+      <iterations>423522</iterations>
       <model name='beer'>
-        <pose>0.844715 0.155051 -7e-06 -1e-06 -0 -4e-06</pose>
+        <pose>1.22306 0.028985 -7e-06 -1e-06 -0 -4e-06</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0.844715 0.155051 0.114993 -1e-06 -0 -4e-06</pose>
+          <pose>1.22306 0.028985 0.114993 -1e-06 -0 -4e-06</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.8 0 -0 0</acceleration>
           <wrench>0 0 -3.822 0 -0 0</wrench>
         </link>
       </model>
       <model name='bowl'>
-        <pose>0.569984 0.060872 0.00078 0.006127 0.005085 -0.001061</pose>
+        <pose>1.15072 0.352392 -5e-06 4.7e-05 4.7e-05 1e-06</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0.569984 0.060872 0.00078 0.006127 0.005085 -0.001061</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.015133 0.035978 -0.07897 -1.73992 0.787746 -0.030061</acceleration>
-          <wrench>0.001513 0.003598 -0.007897 0 -0 0</wrench>
+          <pose>1.15072 0.352392 -5e-06 4.7e-05 4.7e-05 1e-06</pose>
+          <velocity>0 -0 -0.000973 0.08317 0.08317 -0</velocity>
+          <acceleration>2.72184 -2.72184 -0.884028 1.56431 -1.56436 -3.14159</acceleration>
+          <wrench>0.272184 -0.272184 -0.088403 0 -0 0</wrench>
         </link>
       </model>
       <model name='coke_can'>
-        <pose>0.627407 -0.646618 -0.002689 -0.056829 0.006551 -0.000501</pose>
+        <pose>1.58273 -0.079411 -0.002718 -0.058601 0.005325 -0.00052</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0.627407 -0.646618 -0.002689 -0.056829 0.006551 -0.000501</pose>
+          <pose>1.58273 -0.079411 -0.002718 -0.058601 0.005325 -0.00052</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.018644 -0.040396 -0.000436 0.703947 -0.32658 -0.025516</acceleration>
-          <wrench>-0.007271 -0.015755 -0.00017 0 -0 0</wrench>
+          <acceleration>0.040181 0.040012 0.000597 -0.695641 0.704832 0.068526</acceleration>
+          <wrench>0.015671 0.015605 0.000233 0 -0 0</wrench>
         </link>
       </model>
       <model name='coke_can_0'>
-        <pose>0.574806 0.073553 -0.002447 -0.01472 -0.028093 -0.003468</pose>
+        <pose>1.51871 -0.399125 -0.002659 -0.055112 0.007741 -0.000483</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0.574806 0.073553 -0.002447 -0.01472 -0.028093 -0.003468</pose>
+          <pose>1.51871 -0.399125 -0.002659 -0.055112 0.007741 -0.000483</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.299906 0.486396 0.034885 -2.26581 -1.01159 -2.09767</acceleration>
-          <wrench>0.116963 0.189695 0.013605 0 -0 0</wrench>
+          <acceleration>0.040402 0.022034 0.002042 -0.382614 0.708503 0.07172</acceleration>
+          <wrench>0.015757 0.008593 0.000796 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='disk_part'>
+        <pose>1.13688 -0.318232 -5e-06 -3.2e-05 -3.2e-05 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>1.13688 -0.318232 -5e-06 -3.2e-05 -3.2e-05 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-3.16087 3.16086 0.31441 0.78697 -0.786932 -3.14159</acceleration>
+          <wrench>-1.58043 1.58043 0.157205 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
@@ -892,49 +958,49 @@
         </link>
       </model>
       <model name='yaskawa_mh5lf'>
-        <pose>-0 -0 2e-05 2e-06 -1e-06 -0</pose>
+        <pose>-0 0 4.7e-05 9e-06 -5e-06 0</pose>
         <scale>1 1 1</scale>
         <link name='base_link'>
-          <pose>-0 -0 2e-05 2e-06 -1e-06 -0</pose>
-          <velocity>0 0 -0.004883 -0.000443 0.000239 0</velocity>
-          <acceleration>1e-05 0.000153 -9.766 -0.88651 0.477154 -0.000181</acceleration>
-          <wrench>1e-05 0.000153 -9.766 0 -0 0</wrench>
+          <pose>-0 0 4.7e-05 9e-06 -5e-06 0</pose>
+          <velocity>-0 -1e-06 0.009475 0.001743 -0.00093 1e-06</velocity>
+          <acceleration>-3.2e-05 -0.001274 18.9505 0.344749 -1.28149 -3.13978</acceleration>
+          <wrench>-3.2e-05 -0.001274 18.9505 0 -0 0</wrench>
         </link>
         <link name='link_b'>
-          <pose>0.391715 -0.000216 0.622468 -0.008264 0.036766 0.000712</pose>
-          <velocity>-4.7e-05 0.000247 -0.004532 0.000418 -0.000225 -0.000154</velocity>
-          <acceleration>0.101092 0.523234 -9.50884 -0.025481 0.013406 -0.153705</acceleration>
-          <wrench>0.101092 0.523234 -9.50884 0 -0 0</wrench>
+          <pose>0.630407 -0.095933 0.666223 7.1e-05 0.870074 -0.151001</pose>
+          <velocity>-0.002022 -0.001056 0.004866 0.00011 0.003038 0.001749</velocity>
+          <acceleration>-2.64146 -2.21724 14.7606 -1.28873 1.03406 -1.39181</acceleration>
+          <wrench>-2.64146 -2.21724 14.7606 0 -0 0</wrench>
         </link>
         <link name='link_l'>
-          <pose>0.088 -4.9e-05 0.330019 2e-06 -0.010915 -0.000549</pose>
-          <velocity>7.7e-05 0.000135 -0.00476 -0.000432 -0.000404 5e-06</velocity>
-          <acceleration>0.155441 0.281816 -9.66447 -0.875404 -0.165905 0.004614</acceleration>
-          <wrench>0.155441 0.281816 -9.66447 0 -0 0</wrench>
+          <pose>0.173995 -0.02648 0.461046 9e-06 0.011812 -0.15101</pose>
+          <velocity>-0.000415 -0.000795 0.009358 0.002235 0.003352 -0.000529</velocity>
+          <acceleration>-0.843369 -1.59885 18.9492 0.837035 0.719593 2.61316</acceleration>
+          <wrench>-0.843369 -1.59885 18.9492 0 -0 0</wrench>
         </link>
         <link name='link_r'>
-          <pose>0.16229 -9e-05 0.665903 -0.008405 0.187107 -0.000548</pose>
-          <velocity>-5.5e-05 0.000267 -0.004601 0.000418 -0.000175 -0.000154</velocity>
-          <acceleration>0.109265 0.554196 -9.52693 -0.024943 0.063943 -0.154314</acceleration>
-          <wrench>0.218529 1.10839 -19.0539 0 -0 0</wrench>
+          <pose>0.332695 -0.050634 1.02316 7.1e-05 0.869989 -0.151001</pose>
+          <velocity>0.001164 -0.001969 0.007687 0.001048 0.009169 0.001755</velocity>
+          <acceleration>-0.356387 -3.34179 16.3592 -0.42067 1.21559 -1.46591</acceleration>
+          <wrench>-0.712774 -6.68357 32.7184 0 -0 0</wrench>
         </link>
         <link name='link_s'>
-          <pose>-0 -0 0.199019 2e-06 -1e-06 -0.000549</pose>
-          <velocity>4.7e-05 8.4e-05 -0.004813 -0.000437 0.000232 5e-06</velocity>
-          <acceleration>0.094492 0.172268 -9.69559 -0.880074 0.470874 0.004968</acceleration>
-          <wrench>0.094492 0.172268 -9.69559 0 -0 0</wrench>
+          <pose>-1e-06 -2e-06 0.199047 9e-06 -3e-06 -0.15101</pose>
+          <velocity>-0.000178 -0.000316 0.009364 0.001666 -0.000897 -0.000536</velocity>
+          <acceleration>-0.362653 -0.663328 18.8397 0.267998 -1.3143 2.6062</acceleration>
+          <wrench>-0.362653 -0.663328 18.8397 0 -0 0</wrench>
         </link>
         <link name='link_t'>
-          <pose>0.478156 -0.000154 0.619288 1.8e-05 0.036766 0.000712</pose>
-          <velocity>-4.7e-05 0.000232 -0.004476 0.000438 -0.000226 -0.000154</velocity>
-          <acceleration>0.100436 0.506685 -9.47348 -0.005667 0.012929 -0.153821</acceleration>
-          <wrench>0.100436 0.506685 -9.47348 0 -0 0</wrench>
+          <pose>0.740683 -0.112713 0.533986 7.1e-05 0.869994 -0.151001</pose>
+          <velocity>-0.002385 -0.000831 0.004474 -0.000257 0.000704 0.001738</velocity>
+          <acceleration>-2.88149 -1.7617 14.4418 1.48611 -0.226292 1.73849</acceleration>
+          <wrench>-2.88149 -1.7617 14.4418 0 -0 0</wrench>
         </link>
         <link name='link_u'>
-          <pose>0.084616 -4.7e-05 0.64 2e-06 0.187107 -0.000548</pose>
-          <velocity>-4.9e-05 0.000262 -0.004691 -0.000427 -0.000174 5e-06</velocity>
-          <acceleration>0.103228 0.546195 -9.59459 -0.87043 0.064979 0.0051</acceleration>
-          <wrench>0.103228 0.546195 -9.59459 0 -0 0</wrench>
+          <pose>0.181234 -0.027587 1.081 1.3e-05 0.869989 -0.151</pose>
+          <velocity>0.001677 -0.002113 0.00922 0.002997 0.00887 -0.000537</velocity>
+          <acceleration>0.671417 -3.99736 18.8161 1.59902 1.48492 2.60597</acceleration>
+          <wrench>0.671417 -3.99736 18.8161 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -943,7 +1009,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>0.076321 -4.30668 0.930507 0 0.107643 1.4082</pose>
+        <pose>-3.39158 -3.91656 7.27117 -0 1.03564 0.704194</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
