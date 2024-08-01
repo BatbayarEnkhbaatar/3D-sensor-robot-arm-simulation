@@ -82,4 +82,17 @@ Jax backend: gpu
 
 
 ![Preview](gripper.gif)
-![Preview](gripper_move.mov)
+![Preview](images/image.png)
+![Preview](images/image2.png)
+![Preview](images/image3.png)
+![Preview](images/image4.png)
+![Preview](images/image5.png)
+![Preview](images/image6.png)
+![Preview](images/image7.png)
+![Preview](images/image8.png)
+![Preview](images/image9.png)
+![Preview](images/image10.png)
+![Preview](images/image11.png)
+![Preview](images/image12.png)
+![Preview](images/image13.png)
+
