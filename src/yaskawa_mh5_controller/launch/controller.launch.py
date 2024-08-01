@@ -8,13 +8,7 @@ from launch.substitutions import Command
 import os
 
 def generate_launch_description():
-    # model_arg = DeclareLaunchArgument(
-    #     name="models", 
-    #     default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "urdf", "mh5.urdf.xacro"),
-    #     description="Absolute path to the robot URDF file"
-    # )
 
-    # robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration("models")]))
     robot_description = ParameterValue(
         Command(
             [
@@ -48,10 +42,19 @@ def generate_launch_description():
             "/controller_manager",
         ]
     )
+    gripper_controller_spawner = Node(
+        package="controller_manager",  
+        executable="spawner",
+        arguments=[
+            "gripper_controller",
+            "--controller-manager", 
+            "/controller_manager",
+        ]
+    )
 
     return LaunchDescription([
-        # robot_description,
         robot_state_publisher,
         joint_state_broadcaster_spawner,
-        arm_controller_spawner
+        arm_controller_spawner,
+        gripper_controller_spawner
     ])
