@@ -22,9 +22,10 @@ sudo apt-get install ros-humble-ros2-control
 sudo apt-get install ros-humble-ros2-controllers
 sudo apt-get install ros-humble-gazebo-ros2-control
 sudo apt-get install ros-humble-moveit
-sudo apt-get install ros-humble-ros-control ros-humble-ros-controllers
 sudo apt install ros-humble-gazebo-ros-pkgs
-
+sudo apt install ros-humble-rmw-cyclonedds-cppexport
+# add following line into the ~/.bashrc 
+sudo export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 ``` 
 
 ## Commands to install Cuda for the GPU  
@@ -78,3 +79,7 @@ Jax backend: gpu
 5. ros2 run robotic_actions taskservernode
 6. ros2 run robotic_ai_model task_client
 ``` 
+
+
+![Preview](gripper.gif)
+![Preview](gripper_move.mov)
