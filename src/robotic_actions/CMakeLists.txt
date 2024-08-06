@@ -12,6 +12,7 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_action REQUIRED)
 find_package(robotic_msgs REQUIRED)
 find_package(rclcpp_components REQUIRED)
+find_package(moveit_ros_planning_interface REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -30,34 +31,35 @@ ament_target_dependencies(taskserver
   "rclcpp"
   "rclcpp_action"
   "robotic_msgs"
-  "rclcpp_components")
+  "rclcpp_components"
+  "moveit_ros_planning_interface")
   rclcpp_components_register_node(taskserver
-  PLUGIN "RoboticTasks::TaskServer"
+  PLUGIN "RoboticTasks::RoboticTaskServer"
   EXECUTABLE taskservernode)
-install(
-    DIRECTORY launch
-    DESTINATION share/${PROJECT_NAME}
-  )
-install(
-    PROGRAMS
-    robotic_actions/rest_api.py
-    DESTINATION lib/${PROJECT_NAME}/robotic_actions
-  )
-  install(
-    PROGRAMS
-    robotic_actions/robotic_transformer_pytorch/robotic_transformer_pytorch.py
-    DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
-  )
-  install(
-    PROGRAMS
-    robotic_actions/robotic_transformer_pytorch/pytorch_launch.py
-    DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
-  )
-  install(
-    PROGRAMS
-    robotic_actions/robotic_transformer_pytorch/rt1_v1.pt
-    DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
-  )
+# install(
+#     DIRECTORY launch
+#     DESTINATION share/${PROJECT_NAME}
+#   )
+# install(
+#     PROGRAMS
+#     robotic_actions/rest_api.py
+#     DESTINATION lib/${PROJECT_NAME}/robotic_actions
+#   )
+  # install(
+  #   PROGRAMS
+  #   robotic_actions/robotic_transformer_pytorch/robotic_transformer_pytorch.py
+  #   DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
+  # )
+  # install(
+  #   PROGRAMS
+  #   robotic_actions/robotic_transformer_pytorch/pytorch_launch.py
+  #   DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
+  # )
+  # install(
+  #   PROGRAMS
+  #   robotic_actions/robotic_transformer_pytorch/rt1_v1.pt
+  #   DESTINATION lib/${PROJECT_NAME}/robotic_actions/robotic_transformer_pytorch/
+  # )
 install(TARGETS
   taskserver
   ARCHIVE DESTINATION lib

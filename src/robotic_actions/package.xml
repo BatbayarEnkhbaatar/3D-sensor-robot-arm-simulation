@@ -16,7 +16,7 @@
   <depend>rclcpp_action</depend>
   <depend>robotic_msgs</depend>
   <depend>rclcpp_components</depend>
-
+  <depend>moveit_ros_planning_interface</depend>
   
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
 

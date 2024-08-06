@@ -66,10 +66,10 @@ private:
         auto arm_group = moveit::planning_interface::MoveGroupInterface(shared_from_this(), "arm");
 
         // Robot gripper instance
-        // auto gripper_group = moveit::planning_interface::MoveGroupInterface(shared_from_this(), "gripper");
+        auto gripper_group = moveit::planning_interface::MoveGroupInterface(shared_from_this(), "gripper");
 
         bool arm_within_bound = arm_group.setJointValueTarget(goal->task_sequences);
-        // bool gripper_within_bound = gripper_group.setJointValueTarget(gripper_sequences_received);
+        // bool gripper_within_bound = gripper_group.setJointValueTarget(goal-> task_gripper);
 
         if (!arm_within_bound){
             RCLCPP_INFO(this->get_logger(), "Target joint position is not able to be executed");
