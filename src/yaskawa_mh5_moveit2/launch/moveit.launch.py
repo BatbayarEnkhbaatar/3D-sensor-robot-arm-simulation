@@ -8,27 +8,29 @@ from launch_ros.actions import Node
 import launch
 
 def generate_launch_description():
-    # Declare launch arguments
+
     is_sim_arg = DeclareLaunchArgument(
         "is_sim",
         default_value="True",
         description="Whether to use simulation or real hardware"
     )
-
-    # gui_arg = DeclareLaunchArgument(
-    #     name="gui", 
-    #     default_value="False",
-    #     description="Enable GUI"
-    # )
-    
     # Create MoveIt configuration
+    # moveit_config = (
+    #     MoveItConfigsBuilder("yaskawa_mh5lf", package_name="yaskawa_mh5_moveit2")
+    #     .robot_description(file_path=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "urdf", "mh5.urdf.xacro"))
+    #     .robot_description_semantic(file_path=os.path.join(get_package_share_directory("yaskawa_mh5_moveit2"), "config", "yaskawa_mh5lf.srdf"))
+    #     .trajectory_execution(file_path=os.path.join(get_package_share_directory("yaskawa_mh5_moveit2"), "config", "moveit_controllers.yaml"))
+    #     .robot_description_kinematics(file_path=os.path.join(get_package_share_directory("yaskawa_mh5_moveit2"), "config", "kinematics.yaml"))
+    #     .to_moveit_configs()
+    # )
     moveit_config = (
         MoveItConfigsBuilder("yaskawa_mh5lf", package_name="yaskawa_mh5_moveit2")
         .robot_description(file_path=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "urdf", "mh5.urdf.xacro"))
-        .robot_description_semantic(file_path=os.path.join(get_package_share_directory("yaskawa_mh5_moveit2"), "config", "yaskawa_mh5lf.srdf"))
-        .trajectory_execution(file_path=os.path.join(get_package_share_directory("yaskawa_mh5_moveit2"), "config", "moveit_controllers.yaml"))
+        .robot_description_semantic(file_path="config/yaskawa_mh5lf.srdf")
+        .trajectory_execution(file_path="config/moveit_controllers.yaml")
         .to_moveit_configs()
     )
+
 
     # Create Move Group node
     move_group_node = Node(
@@ -38,14 +40,6 @@ def generate_launch_description():
         parameters=[moveit_config.to_dict(), {"use_sim_time": LaunchConfiguration('is_sim')}, {"publish_robot_description_semantic": True}],
         arguments=["--ros-args", "--log-level", "info"]
     )
-
-    # Create Joint State Publisher node with GUI condition
-    # joint_state_publisher_node = Node(
-    #     package='joint_state_publisher',
-    #     executable='joint_state_publisher',
-    #     name='joint_state_publisher'
-    # )
-
     # Create RViz node
     rviz_config = os.path.join(get_package_share_directory("yaskawa_mh5_moveit2"), "config", "moveit.rviz")
 
