@@ -2,11 +2,11 @@
 
 # Goal 
 float64[] task_sequences
-
+float64[] task_action
 ---
 # Result 
 bool success
-
+bool terminate_episode
 ---
 # Feedback 
 string feedbackmsg
