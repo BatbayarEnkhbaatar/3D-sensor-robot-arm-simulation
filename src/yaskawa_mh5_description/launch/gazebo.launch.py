@@ -22,11 +22,11 @@ def generate_launch_description():
             default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "urdf", "mh5.urdf.xacro"),
             description="Absolute path to the robot URDF file"
         )
-    world_arg = DeclareLaunchArgument(
-        name="world", 
-        default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "worlds", "yaskawa.world"),
-        description="Default world environment"
-    )
+    # world_arg = DeclareLaunchArgument(
+    #     name="world", 
+    #     default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "worlds", "yaskawa.world"),
+    #     description="Default world environment"
+    # )
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration("models")]))
 
     robot_state_publisher_node = Node(
