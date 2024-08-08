@@ -201,7 +201,6 @@ p
     <axis xyz="-1 0 0"/>
     <limit effort="100" lower="-3.3161" upper="3.3161" velocity="3.48"/>
   </joint>
-allow-overriding yaskawa_mh5_description
 
   <joint name="joint_b" type="revolute">
     <parent link="link_r"/>
