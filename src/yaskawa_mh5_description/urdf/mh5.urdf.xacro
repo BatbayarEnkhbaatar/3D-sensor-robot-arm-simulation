@@ -97,7 +97,7 @@
   <link name="link_u">
     <xacro:default_inertial mass="1.0"/>
     <visual>
-
+p
       <geometry>
         <mesh filename="package://yaskawa_mh5_description/meshes/mh5/visual/MH5_U_AXIS.stl" scale="2.0 2.0 2.0"/>
       </geometry>
@@ -201,6 +201,7 @@
     <axis xyz="-1 0 0"/>
     <limit effort="100" lower="-3.3161" upper="3.3161" velocity="3.48"/>
   </joint>
+allow-overriding yaskawa_mh5_description
 
   <joint name="joint_b" type="revolute">
     <parent link="link_r"/>
