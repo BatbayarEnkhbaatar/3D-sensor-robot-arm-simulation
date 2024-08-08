@@ -96,4 +96,4 @@ Jax backend: gpu
 ![Preview](images/image12.png)
 ![Preview](images/image13.png)
 ![Preview](images/image14.png)
-
+![Preview](images/image15.png)
