@@ -159,7 +159,6 @@ p
       <material name="yellow"/>
     </collision>
   </link>
-  
 
 
   <joint name="virtual_joint" type="fixed">

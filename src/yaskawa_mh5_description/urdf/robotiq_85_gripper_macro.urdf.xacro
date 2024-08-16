@@ -322,5 +322,32 @@
 			<material>Gazebo/Grey</material>
 		</gazebo>
 		<xacro:robotiq_85_gripper_transmission />
+
+		<joint name="robotiq_85_left_finger_tip_joint_mimic" type="fixed">
+			<parent link="world" />
+			<child link="random" />
+		</joint>
+		<link name="random"/>
+
+		<joint name="robotiq_85_right_finger_tip_joint_mimic" type="fixed">
+			<parent link="world" />
+			<child link="random2" />
+		</joint>
+		<link name="random2"/>
+		<joint name="robotiq_85_right_inner_knuckle_joint_mimic" type="fixed">
+			<parent link="world" />
+			<child link="random3" />
+		</joint>
+				<link name="random3"/>
+		<joint name="robotiq_85_left_inner_knuckle_joint_mimic" type="fixed">
+			<parent link="world" />
+			<child link="random4" />
+		</joint>
+		<link name="random4"/>
+		<joint name="robotiq_85_right_knuckle_joint_mimic" type="fixed">
+			<parent link="world" />
+			<child link="random5" />
+		</joint>
+		<link name="random5"/>
 	<!-- </xacro:macro> -->
 </robot>

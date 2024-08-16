@@ -18,7 +18,7 @@
   <joint name="tesseravue_chassis_joint" type="fixed">
     <parent link="world"/>
     <child link="tesseravue_chassis_link"/>
-    <origin xyz="3 0 0" rpy="0 0 -1.5708"/> 
+    <origin xyz="2.5 0 0" rpy="0 0 -1.5708"/> 
   </joint>
 
   <!-- 3D sensor -->
@@ -45,12 +45,11 @@
   <joint name="tesseravue_camera" type="fixed">
     <parent link="tesseravue_chassis_link"/>
     <child link="tesseravue_camera_link"/>
-     <origin xyz="0.096 -0.15   1.5" rpy="0 ${PI/5} -${PI/2}"/>
+     <origin xyz="0.096 -0.15   1.5" rpy="0 ${PI/4} -${PI/2}"/>
     <!-- <origin xyz="0.096 0.07 0.38" rpy="${PI/2} 0 ${PI/2}"/> -->
     <!-- 1.5708 -->
     <!-- <origin xyz="0.0765 0 0.06" rpy="0 0 0"/> Adjust as needed -->
   </joint>
-
 
   <link name="tesseravue_camera_link">
     <xacro:default_inertial mass="0.5"/>
@@ -82,17 +81,17 @@
     <sensor type="camera" name="TesseraVue">
       <pose>0 0 0 0 0 0 </pose>
       <visualize>true</visualize>
-      <update_rate>12.0</update_rate>
+      <update_rate>5.0</update_rate>
       <camera name="TesseraVue">
         <horizontal_fov>1.089</horizontal_fov>
         <image>
           <width>3840</width>
-          <height>2160</height>
+          <height>5840</height>
           <format>R8G8B8</format>
         </image>
         <clip>
-          <near>0.05</near>
-          <far>8.0</far>
+          <near>0.5</near>
+          <far>20.0</far>
         </clip>
       </camera>
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
