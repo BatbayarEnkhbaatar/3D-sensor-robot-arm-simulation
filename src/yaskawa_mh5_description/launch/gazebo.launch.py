@@ -35,8 +35,6 @@ def generate_launch_description():
         parameters=[{"robot_description": robot_description}]
     )
     
-    
-
     start_gazebo_server = IncludeLaunchDescription(PythonLaunchDescriptionSource(os.path.join(
         get_package_share_directory("gazebo_ros"), "launch", "gzserver.launch.py"))
         #    launch_arguments={
@@ -49,7 +47,7 @@ def generate_launch_description():
         package = "gazebo_ros",
         executable="spawn_entity.py",
         arguments=["-entity", "yaskawa_mh5lf", "-topic", "robot_description" ],
-        output ="screen"
+        output ="both"
     )
 
     return LaunchDescription([

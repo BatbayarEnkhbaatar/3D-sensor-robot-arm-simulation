@@ -19,20 +19,24 @@ def generate_launch_description():
         value_type=str
     )
     robot_state_publisher = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
-        parameters=[{"robot_description": robot_description}]
-    )
+    package="robot_state_publisher",
+    executable="robot_state_publisher",
+    parameters=[{"robot_description": robot_description},
+                {"use_sim_time": True}],
+    remappings=[("joint_states", "yaskawa_mh5lf/joints_states")]
+)
+
 
     joint_state_broadcaster_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=[
-            "joint_state_broadcaster",
-            "--controller-manager",  
-            "/controller_manager",
-        ]
-    )
+    package="controller_manager",
+    executable="spawner",
+    arguments=[
+        "joint_state_broadcaster",
+        "--controller-manager",  
+        "/controller_manager",
+    ],
+    remappings=[("joint_states", "yaskawa_mh5lf/joints_states")]
+)
     arm_controller_spawner = Node(
         package="controller_manager",  
         executable="spawner",
@@ -53,8 +57,8 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        robot_state_publisher,
         joint_state_broadcaster_spawner,
+        robot_state_publisher,
         arm_controller_spawner,
         gripper_controller_spawner
     ])
