@@ -1,0 +1,14 @@
+# RotobicTasks.action
+
+# Goal 
+float64[] task_sequences
+int64[] task_action_gripper
+---
+# Result 
+bool success
+bool terminate_episode
+bool gripper_success
+---
+# Feedback 
+string feedbackmsg
+

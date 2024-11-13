@@ -1,0 +1,10 @@
+# Goal
+float64[] task_sequences
+
+int32 task_number
+---
+# Result
+bool success
+---
+# Feedback 
+string feedbackmsg
