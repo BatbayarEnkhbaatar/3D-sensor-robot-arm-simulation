@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="yaskawa_mh5lf">
+ <xacro:property name="PI" value="3.14159"/>
+  <!-- <xacro:include filename="$(find yaskawa_mh5_description)/urdf/gazebo_grasper_plugin.xacro" /> -->
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <robot_param>robot_description</robot_param>
+            <robot_param_node>robot_state_publisher</robot_param_node>
+            <parameters>$(find yaskawa_mh5_controller)/config/mh5_ros2_controller.yaml</parameters>
+        </plugin>
+    </gazebo>
+</robot>

@@ -1,0 +1,53 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    gripper_controller:
+      type: effort_controllers/JointGroupEffortController
+      # type: effort_controllers/JointTrajectoryController
+      # type: joint_trajectory_controller/JointTrajectoryController
+      # type: forward_command_controller/ForwardCommandController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - joint_s
+      - joint_l
+      - joint_u
+      - joint_r
+      - joint_b
+      - joint_t
+      
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true
+
+gripper_controller:
+  ros__parameters:
+    joints:
+      - robotiq_85_left_knuckle_joint
+      # - robotiq_85_right_knuckle_joint
+      # - robotiq_85_left_inner_knuckle_joint
+      # - robotiq_85_right_inner_knuckle_joint
+      # - robotiq_85_left_finger_tip_joint
+      # - robotiq_85_right_finger_tip_joint
+    command_interfaces:
+      - effort
+    state_interfaces:
+      - effort
+    gains:
+      robotiq_85_left_knuckle_joint: 
+        p: 2500.0  
+        d: 10.0 
+        i: 10.0
+        i_clamp: 1.0

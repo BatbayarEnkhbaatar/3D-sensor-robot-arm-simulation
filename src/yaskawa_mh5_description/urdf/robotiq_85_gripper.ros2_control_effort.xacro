@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="robotiq_85_gripper_ros2_control" params="name">
+        <ros2_control name="${name}" type="system">
+
+            <hardware>
+                <plugin>fake_components/GenericSystem</plugin>
+            </hardware>
+            <joint name="robotiq_85_left_knuckle_joint">
+                <param name="initial_position">0.7929</param>
+                <command_interface name="position" />
+                <command_interface name="effort" />
+                <state_interface name="effort"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="robotiq_85_right_knuckle_joint_">
+                <param name="mimic">robotiq_85_left_knuckle_joint</param>
+                <param name="multiplier">1</param>
+                <command_interface name="position" />
+                <command_interface name="effort" />
+                <state_interface name="effort"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <joint name="robotiq_85_left_inner_knuckle_joint">
+                <param name="mimic">robotiq_85_left_knuckle_joint</param>
+                <param name="multiplier">1</param>
+                <command_interface name="position" />
+                <command_interface name="effort" />
+                <state_interface name="effort"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="robotiq_85_right_inner_knuckle_joint">
+                <param name="mimic">robotiq_85_left_knuckle_joint</param>
+                <param name="multiplier">1</param>
+                <command_interface name="position" />
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+
+            <joint name="robotiq_85_left_finger_tip_joint">
+                <param name="mimic">robotiq_85_left_knuckle_joint</param>
+                <param name="multiplier">-1</param>
+                <command_interface name="position" />
+                <command_interface name="effort" />
+                <state_interface name="effort"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="robotiq_85_right_finger_tip_joint">
+                <param name="mimic">robotiq_85_left_knuckle_joint</param>
+                <param name="multiplier">-1</param>
+                <command_interface name="position" />
+                <command_interface name="effort" />
+                <state_interface name="effort"/>
+                <state_interface name="position"/>
+                <state_interface name="velocity"/>
+            </joint>
+        </ros2_control>
+
+         <gazebo>
+            <plugin name="gazebo_grasp_fix" filename="libgazebo_grasp_fix.so">
+                <arm>
+                    <arm_name>gripper</arm_name>
+                    <palm_link>robotiq_85_base_link</palm_link>
+                    <gripper_link>robotiq_85_left_knuckle_link</gripper_link>
+                    <gripper_link>robotiq_85_right_knuckle_link</gripper_link>
+                    <gripper_link>robotiq_85_left_finger_link</gripper_link>
+                    <gripper_link>robotiq_85_right_knuckle_link</gripper_link>
+                    <gripper_link>robotiq_85_right_finger_link</gripper_link>
+                    <gripper_link>robotiq_85_left_finger_link</gripper_link>
+                    <gripper_link>robotiq_85_left_inner_knuckle_link</gripper_link>
+                    <gripper_link>robotiq_85_right_inner_knuckle_link</gripper_link>
+                    <gripper_link>robotiq_85_left_finger_tip_link</gripper_link>
+                    <gripper_link>robotiq_85_right_finger_tip_link</gripper_link>
+                </arm>
+                <forces_angle_tolerance>100</forces_angle_tolerance>
+                <update_rate>10</update_rate>
+                <grip_count_threshold>3</grip_count_threshold>
+                <max_grip_count>10</max_grip_count>
+                <release_tolerance>0.001</release_tolerance>
+                <disable_collision_on_attach>false</disable_collision_on_attach>
+                <contact_topic>__default_topic__</contact_topic>
+            </plugin>
+        </gazebo>
+
+    </xacro:macro>
+
+</robot>

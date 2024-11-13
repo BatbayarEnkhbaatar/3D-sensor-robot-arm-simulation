@@ -1,0 +1,1627 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='yaskawa_mh5lf'>
+      <joint name='tesseravue_chassis_joint' type='fixed'>
+        <pose relative_to='__model__'>0 -2 0 0 -0 2.5708</pose>
+        <parent>world</parent>
+        <child>tesseravue_chassis_link</child>
+      </joint>
+      <link name='tesseravue_chassis_link'>
+        <pose relative_to='tesseravue_chassis_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0.048 -0.075 0.75 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>2.56813</ixx>
+            <ixy>0.0036</ixy>
+            <ixz>-0.036</ixz>
+            <iyy>2.5648</iyy>
+            <iyz>0.05625</iyz>
+            <izz>2.00793</izz>
+          </inertia>
+        </inertial>
+        <collision name='tesseravue_chassis_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.04 0.04 0.04</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/tessaraVue_with_pole.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='tesseravue_chassis_link_fixed_joint_lump__tesseravue_camera_link_collision_1'>
+          <pose>0.096 -0.15 1.5 0 0.785398 -1.57079</pose>
+          <geometry>
+            <cylinder>
+              <length>0.001</length>
+              <radius>0.0005</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='tesseravue_chassis_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.04 0.04 0.04</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/tessaraVue_with_pole.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='tesseravue_chassis_link_fixed_joint_lump__tesseravue_camera_link_visual_1'>
+          <pose>0.096 -0.15 1.5 0 0.785398 -1.57079</pose>
+          <geometry>
+            <cylinder>
+              <length>0.001</length>
+              <radius>0.0005</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <sensor name='TesseraVue' type='camera'>
+          <visualize>1</visualize>
+          <update_rate>5</update_rate>
+          <camera name='TesseraVue'>
+            <horizontal_fov>1.089</horizontal_fov>
+            <image>
+              <width>3840</width>
+              <height>5840</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.5</near>
+              <far>20</far>
+            </clip>
+          </camera>
+          <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+            <frameName>3dcamera_optical</frameName>
+            <min_depth>0.1</min_depth>
+            <max_depth>100.0</max_depth>
+          </plugin>
+          <pose>0.096 -0.15 1.5 0 0.785398 -1.57079</pose>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='virtual_joint' type='fixed'>
+        <pose relative_to='__model__'>0 0 0 0 -0 0</pose>
+        <parent>world</parent>
+        <child>base_link</child>
+      </joint>
+      <link name='base_link'>
+        <pose relative_to='virtual_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_collision'>
+          <pose>0 0 0 0 -0 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_BASE_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose>0 0 0 0 -0 3.14159</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_BASE_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='joint_s' type='revolute'>
+        <pose relative_to='base_link'>0 0 0.4 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>link_s</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.9671</lower>
+            <upper>2.9671</upper>
+            <effort>100</effort>
+            <velocity>2.96</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_s'>
+        <pose relative_to='joint_s'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_s_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_S_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='link_s_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_S_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='joint_l' type='revolute'>
+        <pose relative_to='link_s'>0.176 0 0.262 0 -0 0</pose>
+        <parent>link_s</parent>
+        <child>link_l</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1</lower>
+            <upper>2</upper>
+            <effort>100</effort>
+            <velocity>2.96</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_l'>
+        <pose relative_to='joint_l'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_l_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_L_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='link_l_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_L_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='joint_u' type='revolute'>
+        <pose relative_to='link_l'>0 0 0.62 0 -0 0</pose>
+        <parent>link_l</parent>
+        <child>link_u</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-0.22</lower>
+            <upper>1.5</upper>
+            <effort>100</effort>
+            <velocity>2.96</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_u'>
+        <pose relative_to='joint_u'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_u_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_U_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='link_u_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_U_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='joint_r' type='revolute'>
+        <pose relative_to='link_u'>0.143 0 0.0798 0 -0 0</pose>
+        <parent>link_u</parent>
+        <child>link_r</child>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-3.3161</lower>
+            <upper>3.3161</upper>
+            <effort>100</effort>
+            <velocity>3.48</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_r'>
+        <pose relative_to='joint_r'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_r_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_R_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='link_r_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_R_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='joint_b' type='revolute'>
+        <pose relative_to='link_r'>0.467 0 0 0 -0 0</pose>
+        <parent>link_r</parent>
+        <child>link_b</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-0.610865</lower>
+            <upper>1.61086</upper>
+            <effort>100</effort>
+            <velocity>6.97</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_b'>
+        <pose relative_to='joint_b'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_b_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_B_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='link_b_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_B_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='joint_t' type='revolute'>
+        <pose relative_to='link_b'>0.173 0 0 0 -0 0</pose>
+        <parent>link_b</parent>
+        <child>link_t</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <effort>100</effort>
+            <velocity>6.97</velocity>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='link_t'>
+        <pose relative_to='joint_t'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1.63695</mass>
+          <inertia>
+            <ixx>1.00038</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.00111</iyy>
+            <iyz>0</iyz>
+            <izz>1.00117</izz>
+          </inertia>
+        </inertial>
+        <collision name='link_t_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/collision/MH5_T_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='link_t_fixed_joint_lump__robotiq_85_base_link_collision_1'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_base_link.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='link_t_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>2 2 2</scale>
+              <uri>model://yaskawa_mh5_description/meshes/mh5/visual/MH5_T_AXIS.stl</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='link_t_fixed_joint_lump__robotiq_85_base_link_visual_1'>
+          <pose>0.16 0 0 0 -0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.007</radius>
+            </sphere>
+          </geometry>
+        </visual>
+        <visual name='link_t_fixed_joint_lump__robotiq_85_base_link_visual_2'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_base_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robotiq_85_left_inner_knuckle_joint' type='revolute'>
+        <pose relative_to='link_t'>0.06142 0.0127 0 3.14159 -0 0</pose>
+        <parent>link_t</parent>
+        <child>robotiq_85_left_inner_knuckle_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <effort>0.1</effort>
+            <velocity>100</velocity>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='robotiq_85_left_inner_knuckle_link'>
+        <pose relative_to='robotiq_85_left_inner_knuckle_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.029951</mass>
+          <inertia>
+            <ixx>3.9e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>5e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='robotiq_85_left_inner_knuckle_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_inner_knuckle_link.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='robotiq_85_left_inner_knuckle_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_inner_knuckle_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robotiq_85_left_finger_tip_joint' type='revolute'>
+        <pose relative_to='robotiq_85_left_inner_knuckle_link'>0.04304 -0.037599 0 0 -0 0</pose>
+        <parent>robotiq_85_left_inner_knuckle_link</parent>
+        <child>robotiq_85_left_finger_tip_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <effort>0.1</effort>
+            <velocity>100</velocity>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='robotiq_85_left_finger_tip_link'>
+        <pose relative_to='robotiq_85_left_finger_tip_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.019555</mass>
+          <inertia>
+            <ixx>2e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>5e-06</iyy>
+            <iyz>0</iyz>
+            <izz>6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='robotiq_85_left_finger_tip_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_finger_tip_link.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>30</mu>
+                <mu2>30</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='robotiq_85_left_finger_tip_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_finger_tip_link.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robotiq_85_left_knuckle_joint' type='revolute'>
+        <pose relative_to='link_t'>0.054905 0.030601 0 3.14159 -0 0</pose>
+        <parent>link_t</parent>
+        <child>robotiq_85_left_knuckle_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0.804</upper>
+            <effort>50</effort>
+            <velocity>0.5</velocity>
+          </limit>
+          <dynamics>
+            <damping>100</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='robotiq_85_left_knuckle_link'>
+        <pose relative_to='robotiq_85_left_knuckle_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.002436 -0.018774 0 0 -0 0</pose>
+          <mass>0.0458</mass>
+          <inertia>
+            <ixx>2.29304e-05</ixx>
+            <ixy>-4.4183e-06</ixy>
+            <ixz>0</ixz>
+            <iyy>2.2184e-05</iyy>
+            <iyz>0</iyz>
+            <izz>4.11145e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='robotiq_85_left_knuckle_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_knuckle_link.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>30</mu>
+                <mu2>30</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='robotiq_85_left_knuckle_link_fixed_joint_lump__robotiq_85_left_finger_link_collision_1'>
+          <pose>-0.004086 -0.031486 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_finger_link.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='robotiq_85_left_knuckle_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_knuckle_link.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='robotiq_85_left_knuckle_link_fixed_joint_lump__robotiq_85_left_finger_link_visual_1'>
+          <pose>-0.004086 -0.031486 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_finger_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robotiq_85_right_inner_knuckle_joint' type='revolute'>
+        <pose relative_to='link_t'>0.06142 -0.0127 0 0 -0 0</pose>
+        <parent>link_t</parent>
+        <child>robotiq_85_right_inner_knuckle_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <effort>0.1</effort>
+            <velocity>100</velocity>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='robotiq_85_right_inner_knuckle_link'>
+        <pose relative_to='robotiq_85_right_inner_knuckle_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.029951</mass>
+          <inertia>
+            <ixx>3.9e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>5e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='robotiq_85_right_inner_knuckle_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_inner_knuckle_link.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='robotiq_85_right_inner_knuckle_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_inner_knuckle_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robotiq_85_right_finger_tip_joint' type='revolute'>
+        <pose relative_to='robotiq_85_right_inner_knuckle_link'>0.04304 -0.037599 0 0 -0 0</pose>
+        <parent>robotiq_85_right_inner_knuckle_link</parent>
+        <child>robotiq_85_right_finger_tip_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <effort>0.1</effort>
+            <velocity>100</velocity>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='robotiq_85_right_finger_tip_link'>
+        <pose relative_to='robotiq_85_right_finger_tip_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.019555</mass>
+          <inertia>
+            <ixx>2e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>5e-06</iyy>
+            <iyz>0</iyz>
+            <izz>6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='robotiq_85_right_finger_tip_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_finger_tip_link.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>30</mu>
+                <mu2>30</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='robotiq_85_right_finger_tip_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_finger_tip_link.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='robotiq_85_right_knuckle_joint' type='revolute'>
+        <pose relative_to='link_t'>0.054905 -0.030601 0 0 -0 0</pose>
+        <parent>link_t</parent>
+        <child>robotiq_85_right_knuckle_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <effort>50</effort>
+            <velocity>100</velocity>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <damping>100</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='robotiq_85_right_knuckle_link'>
+        <pose relative_to='robotiq_85_right_knuckle_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.002436 -0.018774 0 0 -0 0</pose>
+          <mass>0.0458</mass>
+          <inertia>
+            <ixx>2.29304e-05</ixx>
+            <ixy>-4.4183e-06</ixy>
+            <ixz>0</ixz>
+            <iyy>2.2184e-05</iyy>
+            <iyz>0</iyz>
+            <izz>4.11145e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='robotiq_85_right_knuckle_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_knuckle_link.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+06</kp>
+                <kd>100</kd>
+                <max_vel>1</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>30</mu>
+                <mu2>30</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='robotiq_85_right_knuckle_link_fixed_joint_lump__robotiq_85_right_finger_link_collision_1'>
+          <pose>-0.004086 -0.031486 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/collision/robotiq_85_finger_link.stl</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='robotiq_85_right_knuckle_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_knuckle_link.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='robotiq_85_right_knuckle_link_fixed_joint_lump__robotiq_85_right_finger_link_visual_1'>
+          <pose>-0.004086 -0.031486 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://yaskawa_mh5_description/meshes/robotiq_gripper/visual/robotiq_85_finger_link.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='gazebo_ros2_control' filename='libgazebo_ros2_control.so'>
+        <robot_param>robot_description</robot_param>
+        <robot_param_node>robot_state_publisher</robot_param_node>
+        <parameters>/home/ubuntu/Documents/simulator/install/yaskawa_mh5_controller/share/yaskawa_mh5_controller/config/mh5_ros2_controller.yaml</parameters>
+      </plugin>
+      <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+        <robotNamespace>/</robotNamespace>
+      </plugin>
+      <plugin name='{prefix}robotiq_85_right_knuckle_jointmimic_joint_plugin' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_right_knuckle_joint</mimicJoint>
+        <multiplier>1.0</multiplier>
+        <offset>0</offset>
+        <sensitiveness>0.0</sensitiveness>
+        <maxEffort>10.0</maxEffort>
+      </plugin>
+      <plugin name='robotiq_85_left_inner_knuckle_jointmimic_joint_plugin' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_left_inner_knuckle_joint</mimicJoint>
+        <multiplier>1.0</multiplier>
+        <offset>0</offset>
+        <sensitiveness>0.0</sensitiveness>
+        <maxEffort>10.0</maxEffort>
+      </plugin>
+      <plugin name='robotiq_85_right_inner_knuckle_jointmimic_joint_plugin' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_right_inner_knuckle_joint</mimicJoint>
+        <multiplier>1.0</multiplier>
+        <offset>0</offset>
+        <sensitiveness>0.0</sensitiveness>
+        <maxEffort>10.0</maxEffort>
+      </plugin>
+      <plugin name='robotiq_85_left_finger_tip_jointmimic_joint_plugin' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_left_finger_tip_joint</mimicJoint>
+        <multiplier>1.0</multiplier>
+        <offset>0</offset>
+        <sensitiveness>0.0</sensitiveness>
+        <maxEffort>10.0</maxEffort>
+      </plugin>
+      <plugin name='robotiq_85_right_finger_tip_jointmimic_joint_plugin' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_right_finger_tip_joint</mimicJoint>
+        <multiplier>1.0</multiplier>
+        <offset>0</offset>
+        <sensitiveness>0.0</sensitiveness>
+        <maxEffort>10.0</maxEffort>
+      </plugin>
+      <static>0</static>
+      <plugin name='mimic_robotiq_85_1' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_right_knuckle_joint</mimicJoint>
+        <multiplier>1.0</multiplier>
+        <offset>0.0</offset>
+      </plugin>
+      <plugin name='mimic_robotiq_85_2' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_left_inner_knuckle_joint</mimicJoint>
+        <multiplier>1.0</multiplier>
+        <offset>0.0</offset>
+      </plugin>
+      <plugin name='mimic_robotiq_85_3' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_right_inner_knuckle_joint</mimicJoint>
+        <multiplier>1.0</multiplier>
+        <offset>0.0</offset>
+      </plugin>
+      <plugin name='mimic_robotiq_85_4' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_left_finger_tip_joint</mimicJoint>
+        <multiplier>-1.0</multiplier>
+        <offset>0.0</offset>
+      </plugin>
+      <plugin name='mimic_robotiq_85_5' filename='libroboticsgroup_gazebo_mimic_joint_plugin.so'>
+        <joint>robotiq_85_left_knuckle_joint</joint>
+        <mimicJoint>robotiq_85_right_finger_tip_joint</mimicJoint>
+        <multiplier>-1.0</multiplier>
+        <offset>0.0</offset>
+      </plugin>
+      <pose>0 0 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>969 89000000</sim_time>
+      <real_time>66 514364518</real_time>
+      <wall_time>1727853591 792332718</wall_time>
+      <iterations>42394</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='object'>
+        <pose>1.33687 0.119434 -47463.2 -1.5708 0.773807 -1.10496</pose>
+        <scale>0.891519 0.891519 0.013982</scale>
+        <link name='link_2'>
+          <pose>1.33688 0.119432 -47463.2 -1.5708 0.773807 -1.10496</pose>
+          <velocity>0.001514 0.001215 -964.511 0 -0 0</velocity>
+          <acceleration>-0 0 -9.8 0 -0 0</acceleration>
+          <wrench>-0 0 -0.003009 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='object_0'>
+        <pose>1.17385 0.004136 0.060091 1.8e-05 -4.1e-05 0.135712</pose>
+        <scale>1 1 1</scale>
+        <link name='link_2'>
+          <pose>1.17386 0.004137 0.060091 1.8e-05 -4.1e-05 0.135712</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-1.64962 -1.83159 -4.08171 -1.09692 -1.53849 -0.823578</acceleration>
+          <wrench>-0.000507 -0.000562 -0.001253 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='yaskawa_mh5lf'>
+        <pose>-9.4e-05 -1e-05 0.017821 -0.002013 0.000905 3.8e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>0 0 3.8e-05 7e-06 -4e-06 -0</pose>
+          <velocity>-0 1e-06 -0.009482 -0.001746 0.000923 -2e-06</velocity>
+          <acceleration>-0.0005 0.001354 -18.965 -0.350415 1.29466 3.13827</acceleration>
+          <wrench>-0.0005 0.001354 -18.965 0 -0 0</wrench>
+        </link>
+        <link name='link_b'>
+          <pose>0.785977 6.3e-05 1.36182 -8e-05 5.5e-05 9e-05</pose>
+          <velocity>-0.001041 0.00076 -0.005413 0.001746 -0.001847 -0.00161</velocity>
+          <acceleration>0.2164 3.13696 -15.6218 4.5e-05 -0.92379 -1.61137</acceleration>
+          <wrench>0.2164 3.13696 -15.6218 0 -0 0</wrench>
+        </link>
+        <link name='link_l'>
+          <pose>0.175998 1.2e-05 0.662038 7e-06 -3.6e-05 9e-05</pose>
+          <velocity>0.000611 0.000769 -0.009519 -0.001609 -0.001841 -0.001608</velocity>
+          <acceleration>1.22226 1.92555 -19.1638 2.92817 -0.917323 -1.61</acceleration>
+          <wrench>1.22226 1.92555 -19.1638 0 -0 0</wrench>
+        </link>
+        <link name='link_r'>
+          <pose>0.318977 2e-05 1.36183 -8e-05 2.6e-05 9e-05</pose>
+          <velocity>-0.001043 0.00155 -0.008479 0.001746 -0.006463 -0.001603</velocity>
+          <acceleration>0.21432 3.92754 -18.2565 0.000461 0.743736 -1.60487</acceleration>
+          <wrench>0.21432 3.92754 -18.2565 0 -0 0</wrench>
+        </link>
+        <link name='link_s'>
+          <pose>-1e-06 -3e-06 0.400038 7e-06 -4e-06 9e-05</pose>
+          <velocity>0.00037 0.000662 -0.009422 -0.001668 0.000915 -0.001606</velocity>
+          <acceleration>0.739554 1.3611 -18.9044 -0.272645 1.30356 1.53418</acceleration>
+          <wrench>0.739554 1.3611 -18.9044 0 -0 0</wrench>
+        </link>
+        <link name='link_t'>
+          <pose>0.958977 7.8e-05 1.36181 1.1e-05 5.5e-05 9e-05</pose>
+          <velocity>-0.001039 0.000451 -0.005056 0.001746 -0.001849 -0.001603</velocity>
+          <acceleration>0.2183 2.82752 -15.424 -1.1e-05 -0.925071 -1.60464</acceleration>
+          <wrench>0.357346 4.62851 -25.2483 0 -0 0</wrench>
+        </link>
+        <link name='link_u'>
+          <pose>0.175975 8e-06 1.28204 6e-06 2.6e-05 9e-05</pose>
+          <velocity>-0.000529 0.0017 -0.009459 -0.00155 -0.006466 -0.001602</velocity>
+          <acceleration>0.654457 3.93846 -19.1036 2.98767 0.740308 -1.60364</acceleration>
+          <wrench>0.654457 3.93846 -19.1036 0 -0 0</wrench>
+        </link>
+        <link name='robotiq_85_left_finger_tip_link'>
+          <pose>1.0755 0.027927 1.3618 -3.14157 8.8e-05 9.2e-05</pose>
+          <velocity>-0.000583 -0.001252 -0.004629 -0.000235 -0.006148 2e-06</velocity>
+          <acceleration>0.674414 1.12476 -15.1538 -1.98163 1.05858 0.000156</acceleration>
+          <wrench>0.013188 0.021995 -0.296333 0 -0 0</wrench>
+        </link>
+        <link name='robotiq_85_left_inner_knuckle_link'>
+          <pose>1.0204 0.012784 1.36181 3.14158 9.1e-05 -0.449849</pose>
+          <velocity>-0.001019 0.000337 -0.004888 -0.000279 -0.006317 -0.028913</velocity>
+          <acceleration>0.238542 2.71361 -15.3354 2.95526 0.469604 -0.640559</acceleration>
+          <wrench>0.007145 0.081275 -0.45931 0 -0 0</wrench>
+        </link>
+        <link name='robotiq_85_left_knuckle_link'>
+          <pose>1.01388 0.030684 1.36181 3.14158 5.3e-05 -0.449829</pose>
+          <velocity>-0.000991 0.000351 -0.004875 0.0016 -0.001698 -0.00914</velocity>
+          <acceleration>0.430959 2.67278 -15.3451 0.08617 -0.888254 -2.85844</acceleration>
+          <wrench>0.019738 0.122413 -0.702804 0 -0 0</wrench>
+        </link>
+        <link name='robotiq_85_right_finger_tip_link'>
+          <pose>1.07551 -0.027753 1.3618 -4e-06 8.7e-05 9.2e-05</pose>
+          <velocity>-0.001513 -0.001324 -0.004729 0.003717 -0.006123 2e-06</velocity>
+          <acceleration>-0.255713 1.0523 -15.1558 1.96999 1.08377 -0.000245</acceleration>
+          <wrench>-0.005 0.020578 -0.296373 0 -0 0</wrench>
+        </link>
+        <link name='robotiq_85_right_inner_knuckle_link'>
+          <pose>1.0204 -0.012616 1.36181 3.5e-05 8.2e-05 0.449974</pose>
+          <velocity>-0.001057 0.000338 -0.004934 0.003756 -0.006292 -0.030243</velocity>
+          <acceleration>0.200679 2.71421 -15.3368 -2.99478 0.416106 -1.97025</acceleration>
+          <wrench>0.006011 0.081293 -0.459351 0 -0 0</wrench>
+        </link>
+        <link name='robotiq_85_right_knuckle_link'>
+          <pose>1.01388 -0.030518 1.36181 3.3e-05 4.4e-05 0.449988</pose>
+          <velocity>-0.001086 0.000351 -0.004983 0.00189 -0.001699 -0.015427</velocity>
+          <acceleration>-0.10568 2.63599 -15.3464 0.170402 -0.923462 -2.86266</acceleration>
+          <wrench>-0.00484 0.120728 -0.702864 0 -0 0</wrench>
+        </link>
+        <link name='tesseravue_chassis_link'>
+          <pose>-1.4e-05 -2.00001 0.021847 0.002183 0.000327 2.57084</pose>
+          <velocity>-0.002304 -0.003271 1.47235 -0.13636 0.061284 0.002628</velocity>
+          <acceleration>175.573 399.76 5793.12 -1.075 -0.89987 0.353939</acceleration>
+          <wrench>175.573 399.76 5793.12 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.21165 0.915293 0.202963 0 0.059643 -1.43099</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='object'>
+      <link name='link_2'>
+        <inertial>
+          <mass>0.000307078</mass>
+          <inertia>
+            <ixx>4.2457e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4.47717e-07</iyy>
+            <iyz>0</iyz>
+            <izz>1.33012e-07</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <pose>3e-06 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.174154 0.146073 2.53541e+19</size>
+            </box>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.174154 0.146073 2.53541e+19</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose>1.4204 0.046606 0 0 -0 0</pose>
+    </model>
+    <model name='object_0'>
+      <link name='link_2'>
+        <inertial>
+          <mass>0.000307078</mass>
+          <inertia>
+            <ixx>4.2457e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4.47717e-07</iyy>
+            <iyz>0</iyz>
+            <izz>1.33012e-07</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <pose>3e-06 0 0 0 -0 0</pose>
+        <visual name='visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055238 0.046332 0.120186</size>
+            </box>
+          </geometry>
+          <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <shader type='pixel'/>
+          </material>
+          <transparency>0</transparency>
+          <cast_shadows>1</cast_shadows>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.055238 0.046332 0.120186</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+                <fdir1>0 0 0</fdir1>
+                <slip1>0</slip1>
+                <slip2>0</slip2>
+              </ode>
+              <torsional>
+                <coefficient>1</coefficient>
+                <patch_radius>0</patch_radius>
+                <surface_radius>0</surface_radius>
+                <use_patch_radius>1</use_patch_radius>
+                <ode>
+                  <slip>0</slip>
+                </ode>
+              </torsional>
+            </friction>
+            <bounce>
+              <restitution_coefficient>0</restitution_coefficient>
+              <threshold>1e+06</threshold>
+            </bounce>
+            <contact>
+              <collide_without_contact>0</collide_without_contact>
+              <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+              <collide_bitmask>1</collide_bitmask>
+              <ode>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+                <max_vel>0.01</max_vel>
+                <min_depth>0</min_depth>
+              </ode>
+              <bullet>
+                <split_impulse>1</split_impulse>
+                <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+                <soft_cfm>0</soft_cfm>
+                <soft_erp>0.2</soft_erp>
+                <kp>1e+13</kp>
+                <kd>1</kd>
+              </bullet>
+            </contact>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>0</static>
+      <allow_auto_disable>1</allow_auto_disable>
+      <pose>1.14668 0.123314 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>
