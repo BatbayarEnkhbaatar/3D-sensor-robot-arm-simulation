@@ -1,0 +1,14 @@
+# TesseraVueTasks.action
+
+# Goal 
+string lastshot_2d
+string lastshot_pcd
+string[] lastshots
+
+---
+# Result 
+bool success
+bool ftpsuccess
+---
+# Feedback
+float64[] object_coordinates

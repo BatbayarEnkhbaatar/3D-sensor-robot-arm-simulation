@@ -13,6 +13,11 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "action/RoboticTasks.action"
+  "action/YaskawaTasks.action"
+  "action/TesseraVueTasks.action"
+  "msg/HoleDetectionResult.msg"
+  "msg/BoltDetectionResult.msg"
+  "msg/YaskawaTasksGripper.msg"
 )
 
 if(BUILD_TESTING)
