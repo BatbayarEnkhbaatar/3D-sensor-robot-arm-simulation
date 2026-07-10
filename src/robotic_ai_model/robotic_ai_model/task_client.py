@@ -16,7 +16,7 @@ class TaskClient(Node):
 
     def __init__(self):
         super().__init__('RoboticTaskClient_Node')
-        self._action_client = ActionClient(self, RoboticTasks, 'task_server')
+        self._action_client = ActionClient(self, RoboticTasks, 'task_server_arm')
         self._action_client.wait_for_server()
         self.get_logger().info('Action Client ready.')
         self.new_goal = True

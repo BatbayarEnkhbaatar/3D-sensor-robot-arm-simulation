@@ -11,15 +11,15 @@ from os import pathsep
 
 def generate_launch_description():
     
-    object_description = get_package_share_directory("point_cloud_processing")
-    object_description_prefix = get_package_prefix("point_cloud_processing")
+    object_description = get_package_share_directory("yaskawa_mh5_description")
+    object_description_prefix = get_package_prefix("yaskawa_mh5_description")
     object_path = os.path.join(object_description, "motoman_resources")
     object_path += pathsep + os.path.join(object_description_prefix, "share")
     env_variable = SetEnvironmentVariable("GAZEBO_MODEL_PATH", object_path)
 
     object_arg = DeclareLaunchArgument(
             name="models", 
-            default_value=os.path.join(get_package_share_directory("point_cloud_processing"), "urdf", "dynamic_object.urdf.xacro"),
+            default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "urdf", "dynamic_object.urdf.xacro"),
             description="Absolute path to the robot URDF file"
         )
     

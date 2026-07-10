@@ -30,14 +30,19 @@ def generate_launch_description():
         .trajectory_execution(file_path="config/moveit_controllers.yaml")
         .to_moveit_configs()
     )
-
+    pipeline_params = {
+        "planning_pipelines": ["ompl"],          # available pipelines
+        "default_planning_pipeline": "ompl",     # pick OMPL by default
+    }
+    pkg_mtc = get_package_share_directory("yaskawa_mh5_moveit2")
 
     # Create Move Group node
     move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
-        parameters=[moveit_config.to_dict(), {"use_sim_time": LaunchConfiguration('is_sim')}, {"publish_robot_description_semantic": True}],
+        parameters=[moveit_config.to_dict(), {"use_sim_time": LaunchConfiguration('is_sim')}, {"publish_robot_description_semantic": True}, 
+                    os.path.join(pkg_mtc, "config", "pipelines_ompl.yaml"),],
         arguments=["--ros-args", "--log-level", "info"]
     )
     # Create RViz node

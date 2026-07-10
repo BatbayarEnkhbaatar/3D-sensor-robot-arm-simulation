@@ -17,28 +17,29 @@ def generate_launch_description():
     model_path = os.path.join(yaskawa_robot_description, "motoman_resources")
     model_path += pathsep + os.path.join(yaskawa_robot_description_prefix, "share")
     env_variable = SetEnvironmentVariable("GAZEBO_MODEL_PATH", model_path)
-    model_arg = DeclareLaunchArgument(
+    robot_model_arg = DeclareLaunchArgument(
             name="models", 
             default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "urdf", "mh5.urdf.xacro"),
             description="Absolute path to the robot URDF file"
         )
-    # world_arg = DeclareLaunchArgument(
-    #     name="world", 
-    #     default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "worlds", "yaskawa.world"),
-    #     description="Default world environment"
-    # )
+    world_arg = DeclareLaunchArgument(
+        name="world", 
+        default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "worlds", "yaskawa.world"),
+        description="Default world environment"
+    )
+
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration("models")]))
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
-        parameters=[{"robot_description": robot_description}]
+        parameters=[{"robot_description": robot_description}],
+        output="both",
     )
     
     start_gazebo_server = IncludeLaunchDescription(PythonLaunchDescriptionSource(os.path.join(
-        get_package_share_directory("gazebo_ros"), "launch", "gzserver.launch.py"))
-        #    launch_arguments={
-        #     'world': LaunchConfiguration('world')}.items()
+        get_package_share_directory("gazebo_ros"), "launch", "gzserver.launch.py")),
+           launch_arguments={'world': LaunchConfiguration('world')}.items()
         )
     start_gazebo_client = IncludeLaunchDescription(PythonLaunchDescriptionSource(os.path.join(
         get_package_share_directory("gazebo_ros"), "launch", "gzclient.launch.py")))
@@ -46,16 +47,19 @@ def generate_launch_description():
     spawn_robot = Node(
         package = "gazebo_ros",
         executable="spawn_entity.py",
-        arguments=["-entity", "yaskawa_mh5lf", "-topic", "robot_description" ],
+        arguments=["-entity", "yaskawa_mh5lf", "-topic", "robot_description"],
         output ="both"
     )
 
+
+
+
     return LaunchDescription([
         env_variable,
-        model_arg,
-        # world_arg,
+        robot_model_arg,
+        world_arg,
         robot_state_publisher_node,
         start_gazebo_server,
         start_gazebo_client,
-        spawn_robot
-    ])
+        spawn_robot,
+         ])

@@ -41,11 +41,11 @@ class HandEyeCalib(Node):
         gripper_msg.gripper_command = 1  # Open gripper
         self.gripper_publisher.publish(gripper_msg)
 
-        time.sleep(3)
+        time.sleep(4)
         # Adjust position offsets
         end_effector_pose[0]
         end_effector_pose[1]
-        end_effector_pose[2] += 50
+        end_effector_pose[2] += 70
         msg = xyzrpy_msgs()
         msg.xyzrpy = end_effector_pose
         self.xyzrpy_publisher.publish(msg)
@@ -53,15 +53,15 @@ class HandEyeCalib(Node):
         
         time.sleep(6)
         # Adjust position offsets
-        end_effector_pose[0] 
-        end_effector_pose[1]
-        end_effector_pose[2] -= 58
+        end_effector_pose[0] -= 5
+        end_effector_pose[1] -= 7
+        # end_effector_pose[2] -= 60
+        end_effector_pose[2] = -165.75487599999997
         msg = xyzrpy_msgs()
         msg.xyzrpy = end_effector_pose
         self.xyzrpy_publisher.publish(msg)
         self.get_logger().info(f"Approaching to object , according to Hand-Eye Calibration : {msg.xyzrpy}")
-        
-
+        self.get_logger().info(f"{end_effector_pose[2]} here is end-effector Z ::")
 
         time.sleep(3)
         self.get_logger().info(f"GRASPING : {self.gripper_publisher}")
@@ -71,14 +71,14 @@ class HandEyeCalib(Node):
         # Adjust position offsets
         end_effector_pose[0]
         end_effector_pose[1]
-        end_effector_pose[2] += 50
+        end_effector_pose[2] += 70
         msg = xyzrpy_msgs()
         msg.xyzrpy = end_effector_pose
         self.xyzrpy_publisher.publish(msg)
         self.get_logger().info(f"3st Stop , according to Hand-Eye Calibration : {msg.xyzrpy}")
         # throwing away
         time.sleep(3)
-        end_ef_pose2 = [538.620, 259.033, 370.305, -170.1313, -8.0149, -70.8824]
+        end_ef_pose2 = [538.620, 259.033, 450.305, -170.1313, -8.0149, -70.8824]
         msg = xyzrpy_msgs()
         msg.xyzrpy = end_ef_pose2
         self.xyzrpy_publisher.publish(msg)

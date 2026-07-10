@@ -46,8 +46,8 @@ command1 = move_to_position(
     move_type=FS100.MOVE_TYPE_LINEAR_ABSOLUTE_POS,
     coordinate=FS100.MOVE_COORDINATE_SYSTEM_BASE,
     speed_class=FS100.MOVE_SPEED_CLASS_MILLIMETER,
-    speed=500,   
-    position=initial_pose2
+    speed=300,   
+    position=initial_pose
     
 )
 

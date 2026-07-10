@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<robot name="unit_box" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Args -->
+  <xacro:arg name="x" default="1.1"/>    <!-- 60 cm in front -->
+  <xacro:arg name="y" default="0.0"/>
+  <xacro:arg name="z" default="0.05"/>   <!-- 5 cm above ground -->
+  <xacro:arg name="box_x" default="0.04"/>
+  <xacro:arg name="box_y" default="0.045"/>
+  <xacro:arg name="box_z" default="0.055"/>
+  <xacro:arg name="mass"  default="0.2"/>
+  <xacro:arg name="color" default="red"/> <!-- red | yellow | brown | grey -->
+
+  <!-- Arg -> properties -->
+  <xacro:property name="px" value="$(arg x)"/>
+  <xacro:property name="py" value="$(arg y)"/>
+  <xacro:property name="pz" value="$(arg z)"/>
+  <xacro:property name="sx" value="$(arg box_x)"/>
+  <xacro:property name="sy" value="$(arg box_y)"/>
+  <xacro:property name="sz" value="$(arg box_z)"/>
+  <xacro:property name="m"  value="$(arg mass)"/>
+  <xacro:property name="cname" value="$(arg color)"/>
+
+  <xacro:property name="origin_xyz" value="${px} ${py} ${pz}"/>
+  <!-- inertia for a solid box -->
+  <xacro:property name="ixx" value="${(m*((sy**2)+(sz**2)))/12.0}"/>
+  <xacro:property name="iyy" value="${(m*((sx**2)+(sz**2)))/12.0}"/>
+  <xacro:property name="izz" value="${(m*((sx**2)+(sy**2)))/12.0}"/>
+
+  <!-- Default RGBA; macro overrides into parent scope -->
+  <xacro:property name="rgba" value="1 0 0 1"/> <!-- default red -->
+  <xacro:macro name="set_rgba_from_color" params="name">
+    <!-- fall back stays as-is if none match -->
+    <xacro:if value="${name == 'red'}">
+      <xacro:property name="rgba" value="1 0 0 1" scope="parent"/>
+    </xacro:if>
+    <xacro:if value="${name == 'yellow'}">
+      <xacro:property name="rgba" value="1 1 0 1" scope="parent"/>
+    </xacro:if>
+    <xacro:if value="${name == 'brown'}">
+      <xacro:property name="rgba" value="0.59 0.29 0 1" scope="parent"/>
+    </xacro:if>
+    <xacro:if value="${name == 'grey'}">
+      <xacro:property name="rgba" value="0.6 0.6 0.6 1" scope="parent"/>
+    </xacro:if>
+  </xacro:macro>
+
+  <link name="unit_box_link">
+    <inertial>
+      <mass value="${m}"/>
+      <origin xyz="${origin_xyz}" rpy="0 0 0"/>
+      <inertia ixx="${ixx}" iyy="${iyy}" izz="${izz}" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="${origin_xyz}" rpy="0 0 0"/>
+      <geometry><box size="${sx} ${sy} ${sz}"/></geometry>
+      <material name="custom_color">
+        <xacro:set_rgba_from_color name="${cname}"/>
+        <color rgba="${rgba}"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="${origin_xyz}" rpy="0 0 0"/>
+      <geometry><box size="${sx} ${sy} ${sz}"/></geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="unit_box_link">
+    <material>Gazebo/Red</material>
+  </gazebo>
+</robot>

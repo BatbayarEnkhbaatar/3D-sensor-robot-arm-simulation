@@ -1,0 +1,12 @@
+# [Open3D INFO] Picked point #329326 (78, 70, 8e+02) to add in queue.
+# [Open3D INFO] Picked point #332688 (21, 70, 8e+02) to add in queue.
+# [Open3D INFO] Picked point #380799 (-37, 70, 7.9e+02) to add in queue.
+# [Open3D INFO] Picked point #345857 (-94, 69, 7.9e+02) to add in queue.
+# [Open3D INFO] Picked point #1963572 (78, 12, 8e+02) to add in queue.
+# [Open3D INFO] Picked point #2149072 (21, 12, 8e+02) to add in queue.
+# [Open3D INFO] Picked point #1768225 (-37, 11, 7.9e+02) to add in queue.
+# [Open3D INFO] Picked point #1948271 (-93, 11, 7.9e+02) to add in queue.
+# [Open3D INFO] Picked point #705103 (80, -46, 8e+02) to add in queue.
+# [Open3D INFO] Picked point #971432 (21, -44, 7.9e+02) to add in queue.
+# [Open3D INFO] Picked point #1329214 (-35, -45, 7.9e+02) to add in queue.
+# [Open3D INFO] Picked point #1564663 (-94, -46, 7.9e+02) to add in queue.

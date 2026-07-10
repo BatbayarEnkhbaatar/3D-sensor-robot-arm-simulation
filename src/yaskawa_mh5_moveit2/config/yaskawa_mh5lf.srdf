@@ -21,25 +21,55 @@
         <joint name="tesseravue_camera"/> -->
     </group>
     <group name="gripper">
-        <joint name="robotiq_85_left_inner_knuckle_joint"/>
-        <joint name="robotiq_85_left_finger_tip_joint"/>
+        <!-- <joint name="robotiq_85_left_inner_knuckle_joint"/>
+        <joint name="robotiq_85_left_finger_tip_joint"/> -->
         <joint name="robotiq_85_left_knuckle_joint"/>
-        <joint name="robotiq_85_left_finger_joint"/>
+
+        <!-- <joint name="robotiq_85_left_finger_joint"/>
         <joint name="robotiq_85_right_inner_knuckle_joint"/>
         <joint name="robotiq_85_right_finger_tip_joint"/>
         <joint name="robotiq_85_right_knuckle_joint"/>
         <joint name="robotiq_85_right_finger_joint"/>
-        <joint name="robotiq_85_base_joint"/>
+        <joint name="robotiq_85_base_joint"/> -->
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
     <group_state name="home" group="arm">
-        <joint name="joint_b" value="0"/>
-        <joint name="joint_l" value="-0.5333"/>
-        <joint name="joint_r" value="0"/>
-        <joint name="joint_s" value="0"/>
-        <joint name="joint_t" value="0"/>
-        <joint name="joint_u" value="-0.8485"/>
+<joint name="joint_s" value="-1.6829362996517716e-06"/>
+<joint name="joint_u" value="4.69287501658755e-06"/>
+<joint name="joint_r" value="-3.292573860669279e-06"/>
+<joint name="joint_t" value="-3.280641891478808e-08"/>
+<joint name="joint_l" value="-2.7794131929326227e-06"/>
+<joint name="joint_b" value="-4.649891740093892e-06"/>
+
     </group_state>
+
+    <group_state name="pickup" group="arm">
+            <joint name="joint_b" value="0.00006149899295770922"/>
+            <joint name="joint_l" value="1.2016811671506815"/>
+            <joint name="joint_r" value="0.00006038097748373161"/>
+            <joint name="joint_s" value="0.00005250281298252446"/>
+            <joint name="joint_t" value="-0.19998959057083354"/>
+            <joint name="joint_u" value="-0.056104330483568"/>
+    </group_state>
+        <group_state name="lift_up" group="arm">
+        <joint name="joint_s" value="0.7562228643000104"/>
+        <joint name="joint_u" value="-0.21999235108505744"/>
+        <joint name="joint_r" value="-9.588004145388851e-05"/>
+        <joint name="joint_t" value="3.920825964254249e-05"/>
+        <joint name="joint_l" value="-0.47903240713317796"/>
+        <joint name="joint_b" value="-5.998989565014767e-05"/>
+    </group_state>
+
+
+    <group_state name="release" group="arm">
+        <joint name="joint_s" value="0.5569195328272576"/>
+        <joint name="joint_u" value="-0.219897854566387"/>
+        <joint name="joint_r" value="3.2140572373329235e-05"/>
+        <joint name="joint_t" value="-1.294027079001836e-05"/>
+        <joint name="joint_l" value="0.9831363281191328"/>
+        <joint name="joint_b" value="-8.237944893885185e-05"/>
+    </group_state>
+
     <group_state name="gripper_close" group="gripper">
         <joint name="robotiq_85_left_knuckle_joint" value="0.3153"/>
     </group_state>
@@ -47,6 +77,23 @@
         <joint name="robotiq_85_left_knuckle_joint" value="0"/>
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
+
+    <end_effector
+        name="gripper"
+        parent_link="link_t"
+        group="gripper"
+        parent_group="arm"/>
+
+    <passive_joint name="robotiq_85_left_inner_knuckle_joint"/>
+    <passive_joint name="robotiq_85_left_finger_joint"/>
+    <passive_joint name="robotiq_85_left_finger_tip_joint"/>
+    <passive_joint name="robotiq_85_right_knuckle_joint"/>
+    <passive_joint name="robotiq_85_right_inner_knuckle_joint"/>
+    <passive_joint name="robotiq_85_right_finger_joint"/>
+    <passive_joint name="robotiq_85_right_finger_tip_joint"/>
+
+
+
     <!-- <end_effector name="gripper" parent_link="robotiq_85_base_link" group="gripper" parent_group="gripper"/> -->
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
     <virtual_joint name="virtual_joint" type="fixed" parent_frame="world" child_link="base_link"/>

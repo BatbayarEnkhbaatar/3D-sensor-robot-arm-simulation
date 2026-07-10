@@ -3,14 +3,14 @@
 from setuptools import find_packages, setup
 # from absl import app
 package_name = 'robotic_ai_model'
-submodules = "robotic_ai_model/rt1_jax/"
-submodules2 = "robotic_ai_model/rt1_jax/models/"
-submodules3 = "robotic_ai_model/rt1_jax/rt_1_x_jax/b321733791_75882326_000900000"
+# submodules = "robotic_ai_model/rt1_jax/"
+# submodules2 = "robotic_ai_model/rt1_jax/models/"
+# submodules3 = "robotic_ai_model/rt1_jax/rt_1_x_jax/b321733791_75882326_000900000"
 setup(
     name=package_name,
     version='0.0.0',
-    # packages=find_packages(exclude=['test']),
-    packages = [package_name, submodules, submodules2, submodules3],
+    packages=find_packages(exclude=['test']),
+    # packages = [package_name, submodules, submodules2, submodules3],
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),

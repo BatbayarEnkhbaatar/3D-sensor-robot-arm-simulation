@@ -8,6 +8,7 @@
   <xacro:include filename="$(find yaskawa_mh5_description)/urdf/TesseraVue_3D_sensor_bigger.urdf.xacro"/>
   <xacro:include filename="$(find yaskawa_mh5_description)/urdf/robotiq_85_gripper.urdf.xacro"/>
   <!-- <xacro:include filename="$(find point_cloud_processing)/urdf/dynamic_object.urdf.xacro"/> -->
+  <!-- <xacro:include filename="$(find yaskawa_mh5_description)/urdf/cube_object.urdf.xacro"/> -->
 
 <!-- macro function for inertial-->
 

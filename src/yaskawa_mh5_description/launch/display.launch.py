@@ -9,18 +9,26 @@ from launch.substitutions import LaunchConfiguration
 from launch.substitutions import Command
 def generate_launch_description():
     
-    model_arg = DeclareLaunchArgument(
+    robot_model_arg = DeclareLaunchArgument(
         name="models", 
         default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "urdf", "mh5.urdf.xacro"),
+        description="Absolute path to the robot URDF file"
+    )
+    object_model_arg = DeclareLaunchArgument(
+        name="models", 
+        default_value=os.path.join(get_package_share_directory("yaskawa_mh5_description"), "urdf", "cube_object.urdf.xacro"),
         description="Absolute path to the robot URDF file"
     )
 
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration("models")]))
 
+    object_description = ParameterValue(Command(['xacro ', LaunchConfiguration("models")]))
+
     robot_state_publisher = Node(
         package="robot_state_publisher",
         executable="robot_state_publisher",
-        parameters=[{"robot_description": robot_description}]
+        parameters=[{"robot_description": robot_description},
+                    {"object_description": object_description}]
     )
     joint_state_publisher = Node(
         package="joint_state_publisher_gui",
@@ -35,9 +43,10 @@ def generate_launch_description():
         
     )
     return LaunchDescription([
-        model_arg,
+        robot_model_arg,
         robot_state_publisher,
         joint_state_publisher,
-        rviz_node
+        rviz_node,
+        object_model_arg
     ])
 
