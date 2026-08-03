@@ -126,8 +126,8 @@ def api_transform():
         rx = float(body.get("rx", 0.0))
         ry = float(body.get("ry", 0.0))
         rz = float(body.get("rz", 0.0))
-    except (TypeError, ValueError) as exc:
-        return jsonify({"error": f"Invalid input: {exc}"}), 400
+    except (TypeError, ValueError):
+        return jsonify({"error": "Invalid input: all fields must be numeric values."}), 400
 
     T_cam_target = _pose_params_to_matrix(x, y, z, rx, ry, rz)
 
